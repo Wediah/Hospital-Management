@@ -6,6 +6,7 @@ nav{
     
 }
 
+
 a {
   text-decoration: none;
   color: black !important;
@@ -25,9 +26,6 @@ a {
     align-items: center;
     width: 100%;
     justify-content: space-between;
-
-
-
 }
 
 .nav3{
@@ -179,7 +177,6 @@ a {
     display: flex;
     gap: 5px;
     align-items: center;
-
 }
 
 
@@ -227,6 +224,168 @@ a {
     border: 1px solid #699BF7;
     color: white;
 }
+
+/* end of style for navigation bar*/
+#greeting {
+    font-size: 30px;
+    line-height: 10px;
+}
+
+.text-welcome {
+    font-size: small;
+    font-family: monospace;
+}
+
+#admin--page {
+
+    background-color: antiquewhite;
+    justify-content: center;
+}
+
+#greeting {
+    padding-top: 50px;
+}
+
+.body-body {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.reports {
+    border-radius: 5px;
+    background: rgba(105, 155, 247, 0.14);
+    width: 140px;
+    
+    padding: 10px;
+}
+
+.reports1 {
+    border-radius: 5px;
+    background: rgba(105, 155, 247, 0.14);
+    width: 140px;
+    
+    padding: 10px;
+}
+
+.icon-con > span {
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#icon-bal {
+    background-color: green;
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+}
+
+#icon-bal1 {
+    background-color: red;
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+}
+
+#icon-pa {
+    color: blue;
+}
+
+#icon-pa1 {
+    color: red;
+}
+
+#icon-pa2 {
+    color: green;
+}
+
+#icon-doc {
+    color: blue;
+}
+
+.first-container {
+    display: flex;
+    gap: 10px;
+}
+
+.reports--container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+
+@media only screen and (max-width: 600px){
+    .reports--container {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .first-container{
+        flex-direction: column;
+    }
+    
+    #bal-report {
+        display: none;
+    }
+}
+
+.balance-cont {
+    background-color: rgba(105, 155, 247, 0.14);
+    padding: 20px;
+}
+
+@media only screen and (min-width: 992px) {
+    .balance-cont {
+        display: none;
+    }
+}
+
+
+
+
+.first--p {
+    color: #000;
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    display: flex;
+}
+
+
+.icon-con {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.icon-con1 {
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+/*.icon-con1 > h3 {
+    
+}*/
+
+.bals {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+}
+
+.bals > hr {
+    margin: 0;
+}
+
+
+
+
 
 
 
