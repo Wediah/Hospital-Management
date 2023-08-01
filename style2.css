@@ -71,8 +71,73 @@ body {
     margin-left: 20px;
     margin-right: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
 }
+
+form {
+    background: #FFFFFF;
+    
+    
+  }
+  form input {
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  form button {
+    
+    outline: 0;
+    background: #FBBC09;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  form button:hover,.form button:active,.form button:focus {
+    background: #e7ad0dc5;
+  }
+
+  .ins {
+    outline: 0;
+    background: #FBBC09;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+.ins:hover {
+  color: #FFFFFF;
+  background: #e7ad0dc5;
+}
+
+  form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  form .message .ab {
+    color: #FBBC09;
+    cursor: pointer;
+  }
 
 .greet {
     position: absolute;
@@ -155,8 +220,8 @@ body {
    }
 }
 
-.log-items:hover {
-    transform: translateY(-20px);
+.log-items:hover span {
+    transform: translateY(-10px);
 }
 
 .button-container {
