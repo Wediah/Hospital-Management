@@ -1,6 +1,6 @@
 <?php
     $host = "localhost:3306";
-    $user = "";
+    $user = "root";
     $pass = "";
     $dbname = "hospitalmanagement";
 
