@@ -42,7 +42,7 @@
         <h3>Create a new account</h3>
         <p>It's quick and simple</p>
         <hr>
-        <form name="signup" action="" method="post">
+        <form name="signup" action="processSignup.php" method="post" onsubmit="return submitForm()">
         <input type="text" name="fname" id="fname" placeholder="Full Name">
         <input type="text" name="email" id="email" placeholder="Email Address">
         <input type="text" name="phone" id="phone" placeholder="Phone Number">
