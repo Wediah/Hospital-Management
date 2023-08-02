@@ -35,7 +35,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin-Signup</title>
-    <link rel="stylesheet" href="/Admin/admin.css">
+    <link rel="stylesheet" href="./admin.css">
     
 </head>
 <body>
@@ -54,9 +54,9 @@
         
 
         
-        <a href="/Admin/adminSignIn.php"><p class="login-refer">Already having an account?</p></a>
+        <a href="./adminSignIn.php"><p class="login-refer">Already having an account?</p></a>
     </div>
 
-    <script src="/Admin/admin.js"></script>
+    <script src="./admin.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucy Mememorial</title>
-    <link rel="stylesheet" href="/Admin/admin.css">
+    <link rel="stylesheet" href="./admin.css">
 </head>
 <body>
     <h2>Lucy Mememorial</h2>
@@ -21,7 +21,7 @@
 
         <hr class="hr-text" data-content="OR">
 
-        <a href="/Admin/adminSignup.php"><p class="login-refer">Create a new account?</p></a>
+        <a href="./adminSignup.php"><p class="login-refer">Create a new account?</p></a>
     </div>
 
     <script src="/Admin/admin.js"></script>
