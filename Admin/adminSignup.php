@@ -17,7 +17,7 @@
         $phone = $_POST["phone"];
         $password = $_POST["password"];
 
-        $sql = "INSERT INTO admin (full_name, email, phone, password) VALUES ('$fname', '$email', '$phone', '$password')";
+        $sql = "INSERT INTO admin (fullname, email, phone, password) VALUES ('$fname', '$email', '$phone', '$password')";
 
         if (mysqli_query($conn,$sql)){
             echo 'Record inserted successfully';
