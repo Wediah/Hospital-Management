@@ -96,6 +96,7 @@
             <a href="">Pharmacist</a>
             <a href="">Laboratorist</a>
             <a href="">Accountant</a>
+            <a href="logout.php">Sign out</a>
         </div>
       
     </div>
