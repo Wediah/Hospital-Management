@@ -32,3 +32,28 @@ function validateForm() {
     document.signup.submit();
 }
 
+
+function submitForm() {
+    event.preventDefault();
+
+    var xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState === 4){
+            if (xhttp.status === 200) {
+                var response = xhttp.responseText;
+                alert(response);
+            } else {
+                alert('Error: ' + xhttp.status);
+            }
+        }
+    };
+
+    var formData = new FormData(document.forms["signup"]);
+
+    xhttp.open("POST", "processSignup.php", true);
+    xhttp.send(formData);
+
+    return false;
+}
+

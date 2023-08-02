@@ -20,10 +20,8 @@
         $sql = "INSERT INTO admin (fullname, email, phone, password) VALUES ('$fname', '$email', '$phone', '$password')";
 
         if (mysqli_query($conn,$sql)){
-            echo 'Record inserted successfully';
-        } else {
-            Echo "Could not insert data:".mysqli_error($conn);
-        }
+            echo 'Sign up successfully';
+        } 
     }
 ?>
 
