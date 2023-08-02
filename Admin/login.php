@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $password = $_POST["password"];
 
     // Perform a SELECT query to check if the user's credentials exist in the database
-    $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+    $sql = "SELECT * FROM admin WHERE email='$email' AND password='$password'";
     $result = $conn->query($sql);
 
     if ($result->num_rows === 1) {
