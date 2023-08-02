@@ -11,7 +11,7 @@
     <div>
         <h3>Log into your account</h3>
         <hr>
-        <form name="signup" action="" >
+        <form name="signup" action="login.php" method="post" >
         <input type="text" name="email" id="email" placeholder="Email Address">
         <input type="password" name="password" id="password" placeholder="Password">
         <button type="submit" value="submit" onclick="validateForm()">Sign in</button>
@@ -24,6 +24,6 @@
         <a href="./adminSignup.php"><p class="login-refer">Create a new account?</p></a>
     </div>
 
-    <script src="/Admin/admin.js"></script>
+    <script src="./admin.js"></script>
 </body>
 </html>
