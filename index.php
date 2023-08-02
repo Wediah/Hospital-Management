@@ -96,7 +96,7 @@
                     <h3>Admin</h3>
                 </div>
                 <div id="loginAdmin" class="button-container">
-                    <a href="/Admin/adminSignIn.php">Log in</a>
+                    <a href="./Admin/adminSignIn.php">Log in</a>
                 </div>
             </div>
             
