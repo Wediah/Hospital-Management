@@ -231,6 +231,13 @@ a {
     line-height: 10px;
 }
 
+.greet-div {
+    display: flex;
+    gap: 2px;
+    font-size: 30px;
+    line-height: 10px;
+}
+
 .text-welcome {
     font-size: small;
     font-family: monospace;

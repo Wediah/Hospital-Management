@@ -1,4 +1,4 @@
-<?php include './headers/header.php'?>
+<?php include './header.php'?>
 
 
 <!DOCTYPE html>
@@ -7,13 +7,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucy Mememorial</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
 </head>
 <body id="admin--page">
+
+    <?php
+        session_start();
+    ?>
+
     <div class="body-body">
-    <h1 id="greeting"></h1>
+        <div class="greet-div">
+            <h1 id="greeting"></h1>
+            <h1><?php echo $_SESSION["email"]; ?></h1>
+        </div>
     <p class="text-welcome">Welcome to the admin dashboard</p>
 
     <div class="first-container">
@@ -147,6 +155,6 @@
     
 
     </div>
-    <script src="/script.js"></script>
+    <script src="./admin.js"></script>
 </body>
 </html>

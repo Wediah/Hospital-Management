@@ -72,9 +72,8 @@
                     
                 </div>
                 <div class="ti3">
-                    <button class="button--3">Sign in</button>
                     <button class="snav" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                        <img src="images\iconn.png" alt="">
+                        <img src="./Adminimg/iconn.png" alt="">
                     </button>
                 </div>
                 
