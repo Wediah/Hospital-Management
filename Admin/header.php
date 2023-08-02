@@ -72,6 +72,7 @@
                     
                 </div>
                 <div class="ti3">
+                    <a href="logout.php" class="button--3">Sign out</a>
                     <button class="snav" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                         <img src="./Adminimg/iconn.png" alt="">
                     </button>

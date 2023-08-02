@@ -1,5 +1,7 @@
-<?php include './header.php'?>
-
+<?php 
+session_start();
+include './header.php';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,15 +15,9 @@
 </head>
 <body id="admin--page">
 
-    <?php
-        session_start();
-    ?>
-
     <div class="body-body">
-        <div class="greet-div">
-            <h1 id="greeting"></h1>
-            <h1><?php echo $_SESSION["email"]; ?></h1>
-        </div>
+    
+    <h1 id="greeting"></h1>
     <p class="text-welcome">Welcome to the admin dashboard</p>
 
     <div class="first-container">
