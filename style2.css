@@ -229,20 +229,21 @@ form {
     display: flex;
 }
 
-.button-container > button {
+.button-container > a {
     border-radius: 4px;
+    padding: 3px;
     border: 1px solid #699BF7;
     background-color: white;
-    color: #699BF7;
+    color: #699BF7 !important;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: medium;
     font-weight: 600;
     cursor: pointer;
 }
 
-.button-container > button:hover {
+.button-container > a:hover {
     background-color: #699BF7;
-    color: white;
+    color: white !important;
 }
 
 .log-items > div {
