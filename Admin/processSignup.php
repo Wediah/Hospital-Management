@@ -9,7 +9,7 @@
     if (!$conn){
         die('Could not connect: '.mysqli_connect_error());
     }
-    echo 'Connected successfully <br/>';
+    echo 'Connected successfully';
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $fname = $_POST["fname"];
