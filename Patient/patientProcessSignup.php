@@ -23,7 +23,11 @@
         $sql = "INSERT INTO patients (fname,lname, email, phone,dob, gender, password) VALUES ('$fname','$lname', '$email', '$phone','$dob','$gender', '$password')";
 
         if (mysqli_query($conn,$sql)){
-            echo 'Sign up successfully';
-        } 
+            header("Location: patientSignin.php");
+            exit();
+        } else {
+            header("Location: error.php");
+            exit();
+        }
     }
 ?>
