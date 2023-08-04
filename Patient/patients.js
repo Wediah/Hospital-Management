@@ -51,7 +51,7 @@ function submitForm() {
 
     var formData = new FormData(document.forms["signup"]);
 
-    xhttp.open("POST", "processSignup.php", true);
+    xhttp.open("POST", "patientProcessSignup.php", true);
     xhttp.send(formData);
 
     return false;
