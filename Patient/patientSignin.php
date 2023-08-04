@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucy Mememorial</title>
-    <link rel="stylesheet" href="/Admin/admin.css">
+    <link rel="stylesheet" href="./patients.css">
 </head>
 <body>
     <h2>Lucy Mememorial</h2>
@@ -24,6 +24,6 @@
         <a href="./patientSignup.php"><p class="login-refer">Create a new account?</p></a>
     </div>
 
-    <script src="/Admin/admin.js"></script>
+    <script src="./patients.js"></script>
 </body>
 </html>
