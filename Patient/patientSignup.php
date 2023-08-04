@@ -12,7 +12,7 @@
         <h3>Create a new account</h3>
         <p>It's quick and simple</p>
         <hr>
-        <form name="signup" action="patientProcessSignup.php" method="post" onsubmit="return submitForm()">
+        <form name="signup" action="patientProcessSignup.php" method="post">
         <input type="text" name="fname" id="fname" placeholder="First Name">
         <input type="text" name="lname" id="lname" placeholder="Last Name">
         <input type="text" name="email" id="email" placeholder="Email Address">
