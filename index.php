@@ -27,7 +27,7 @@
                     <h3>Patients</h3>
                 </div>
                 <div class="button-container">
-                    <a href="">Log in</a>
+                    <a href="./Patient/patientSignin.php">Log in</a>
                 </div>
             </div>
             <div class="log-items">
