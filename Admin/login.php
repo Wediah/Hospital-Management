@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // Login successful
         $_SESSION["loggedin"] = true;
         $_SESSION["email"] = $email;
-        header("Location: adminLp.php"); // Redirect to the dashboard or a logged-in page
+        header("Location: adminLp.php"); // Redirect to the dashboard
         exit();
     } else {
         // Login failed

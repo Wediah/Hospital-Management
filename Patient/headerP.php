@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +13,42 @@
     <script src="script.js"></script>
 </head>
 <body>
+<?php
+    //session_start();
+
+    // Check if the user is logged in
+    if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+        header("Location: patientLogin.php");
+        exit();
+    }
+
+    // Database connection information
+    $host = "localhost";
+    $user = "root";
+    $pass = "";
+    $dbname = "hospitalmanagement";
+
+    // Create a new connection
+    $conn = mysqli_connect($host, $user, $pass, $dbname);
+
+    // Check for connection errors
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    // Prepare a SQL query to retrieve the first name from the database based on the email address
+    $email = $_SESSION["email"];
+    $sql = "SELECT fname FROM patients WHERE email = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $stmt->bind_result($userFirstName);
+    $stmt->fetch();
+    $stmt->close();
+
+    // Close the database connection
+    mysqli_close($conn);
+?>
 <!--navigation bar on large screen-->
   <nav>
       <div class="nav1">
@@ -22,57 +59,46 @@
 
                 <div class="nav3" id="navigation">
                     <ul>
-                        <li><a href ="">Dashboard</a></li>
                         <li>
-                            <a href="">Patients</a>
+                            <a href="">Appointments</a>
                             <div class="dropdown">
                             
-                                <a href="#">Records</a>
-                                <a href="#">Reports</a>
-                                <a href="#">New Patient</a>
+                                <a href="#">Appointment List</a>
+                                <a href="#">Pending Appointment</a>
                             </div>
                         </li>
                         <li>
-                            <a href="">Nurses</a>
-                            <div class="dropdown">
-                            
-                                <a href="#">Records</a>
-                                <a href="#">Reports</a>
-                                <a href="#">New Patient</a>
-                            </div>
+                            <a href="">Prescriptions</a>
                         </li>
                         <li>
-                            <a href ="">Pharmacist</a>
-                            <div class="dropdown">
-                            
-                                <a href="#">Records</a>
-                                <a href="#">Reports</a>
-                                <a href="#">New Patient</a>
-                            </div>
+                            <a href ="">Medications</a>
                         </li>
                         <li>
-                            <a href="">Laboratorist</a>
-                            <div class="dropdown">
-                            
-                                <a href="#">Records</a>
-                                <a href="#">Reports</a>
-                                <a href="#">New Patient</a>
-                            </div>
+                            <a href="">Doctor List</a>
                         </li>
                         <li>
-                            <a href="">Accountant</a>
-                            <div class="dropdown">
-                            
-                                <a href="#">Records</a>
-                                <a href="#">Reports</a>
-                                <a href="#">New Patient</a>
-                            </div>
+                            <a href="">Operation History</a>
+                        </li>
+                        <li>
+                            <a href="">Admission History</a>
                         </li>
                     </ul>
                     
                 </div>
                 <div class="ti3">
-                    <a href="logout.php" class="button--3">Sign out</a>
+                <div >
+                  <div id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
+                      <ion-icon class="icon1" name="person-outline" ></ion-icon>
+                      <span><?php echo $userFirstName; ?></span>
+                  </div>
+                   <!--drop down-->
+                    <ul class="dropdown-menu p-1 mt-1" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="">Profile</a></li>
+                      <li><a class="dropdown-item" href="">Chnage Password</a></li>
+                      <li><a class="dropdown-item" href="logout.php">Log out</a></li>
+                      
+                    </ul>
+                </div>
                     <button class="snav" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                         <img src="/Admin/Adminimg/iconn.png" alt="">
                     </button>
@@ -90,13 +116,20 @@
     </div>
     <div class="offcanvas-body">
         <div class="mobile-nav">
-            <a href="">Dashboard</a>
-            <a href="">Patients</a>
-            <a href="">Nurses</a>
-            <a href="">Pharmacist</a>
-            <a href="">Laboratorist</a>
-            <a href="">Accountant</a>
-            <a href="logout.php">Sign out</a>
+            <a href="">Appointment List</a>
+            <hr>
+            <a href="">Pending Appointments</a>
+            <hr>
+            <a href="">Prescriptions</a>
+            <hr>
+            <a href="">Medications</a>
+            <hr>
+            <a href="">Doctor List</a>
+            <hr>
+            <a href="">Operation History</a>
+            <hr>
+            <a href="">Admission History</a>
+            <hr>
         </div>
       
     </div>

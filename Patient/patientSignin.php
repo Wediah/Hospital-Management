@@ -11,7 +11,7 @@
     <div>
         <h3>Log into your account</h3>
         <hr>
-        <form name="signup" action="patientLogin.php" method="post" onsubmit="return submitForm()">
+        <form name="signup" action="patientLogin.php" method="post">
         <input type="text" name="email" id="email" placeholder="Email Address">
         <input type="password" name="password" id="password" placeholder="Password">
         <button type="submit" value="submit" onclick="validateForm()">Sign in</button>
