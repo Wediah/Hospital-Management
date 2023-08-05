@@ -38,7 +38,7 @@
                     <h3>Doctor</h3>
                 </div>
                 <div class="button-container">
-                    <a href="">Log in</a>
+                    <a href="./Doctors/doctorSignin.php">Log in</a>
                 </div>
             </div>
             <div class="log-items">
@@ -49,7 +49,7 @@
                     <h3>Nurse</h3>
                 </div>
                 <div class="button-container">
-                    <a href="">Log in</a>
+                    <a href="./Nurses/nurseSignin.php">Log in</a>
                 </div>
             </div>
             <div class="log-items">
@@ -60,7 +60,7 @@
                     <h3>Pharmacist</h3>
                 </div>
                 <div class="button-container">
-                    <a href="">Log in</a>
+                    <a href="./Pharmacist/pharmaSignin.php">Log in</a>
                 </div>
             </div>
             <div class="log-items">
@@ -71,7 +71,7 @@
                     <h3>Laboratorist</h3>
                 </div>
                 <div class="button-container">
-                    <a href="">Log in</a>
+                    <a href="./Lab/labSignin.php">Log in</a>
                 </div>
             </div>
             <div class="log-items">
@@ -82,7 +82,7 @@
                     <h3>Accountant</h3>
                 </div>
                 <div class="button-container">
-                    <a href="">Log in</a>
+                    <a href="./Accountant/accSignin.php">Log in</a>
                 </div>
             </div>
             <div class="log-items">

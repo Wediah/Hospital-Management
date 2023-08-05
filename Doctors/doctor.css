@@ -1,0 +1,150 @@
+body {
+    background-color: #F7F4F4;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+body > h2 {
+    color: #699BF7;
+    text-align: center;
+    font-family: Franklin Gothic Heavy;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+} 
+
+body > div {
+    margin-left:35%;
+    margin-right: 35%;
+    border-radius: 10px 10px 10px 10px;
+    background: #FFF;
+    box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+}
+
+@media only screen and (max-width: 600px){
+    body > div {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+body > div > h3 {
+    color: #000;
+text-align: center;
+font-family: Fredoka;
+font-size: 22px;
+font-style: normal;
+font-weight: 600;
+line-height: 22px;
+}
+
+body > div > p {
+    color: #000;
+text-align: center;
+font-family: Fredoka;
+font-size: 15px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: Fredoka;
+    margin-top: 20px;
+}
+
+
+
+form > input {
+    border-radius: 5px;
+border: 1px solid #9B9999;
+background: #FFF;
+height: 30px;
+padding: 2px;
+}
+
+form > label {
+    color: #9B9999;
+font-family: Fredoka;
+}
+
+form > select {
+    border-radius: 5px;
+border: 1px solid #9B9999;
+background: #FFF;
+height: 30px;
+padding: 2px;
+}
+
+
+form > button {
+    border-radius: 5px;
+background: #699BF7;
+border: none;
+height: 30px;
+color: white;
+font-weight: 600;
+line-height: normal;
+}
+
+form > button:hover {
+    background-color: #699bf7c9;
+}
+
+.login-refer {
+    color: #699BF7;
+text-align: center;
+font-family: Fredoka;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+cursor: pointer;
+}
+
+.divider {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.hr-text {
+    line-height: 1em;
+    position: relative;
+    outline: 0;
+    border: 0;
+    color: black;
+    text-align: center;
+    height: 1.5em;
+    opacity: .5;
+    &:before {
+      content: '';
+      background: linear-gradient(to right, transparent,  #9B9999, transparent);
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      height: 1px;
+    }
+    &:after {
+      content: attr(data-content);
+      position: relative;
+      display: inline-block;
+      color: black;
+  
+      padding: 0 .5em;
+      line-height: 1.5em;
+      color:#9B9999;;
+      background-color: #fcfcfa;
+    }
+  }

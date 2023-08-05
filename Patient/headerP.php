@@ -13,42 +13,7 @@
     <script src="script.js"></script>
 </head>
 <body>
-<?php
-    //session_start();
 
-    // Check if the user is logged in
-    if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-        header("Location: patientLogin.php");
-        exit();
-    }
-
-    // Database connection information
-    $host = "localhost";
-    $user = "root";
-    $pass = "";
-    $dbname = "hospitalmanagement";
-
-    // Create a new connection
-    $conn = mysqli_connect($host, $user, $pass, $dbname);
-
-    // Check for connection errors
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-
-    // Prepare a SQL query to retrieve the first name from the database based on the email address
-    $email = $_SESSION["email"];
-    $sql = "SELECT fname FROM patients WHERE email = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $stmt->bind_result($userFirstName);
-    $stmt->fetch();
-    $stmt->close();
-
-    // Close the database connection
-    mysqli_close($conn);
-?>
 <!--navigation bar on large screen-->
   <nav>
       <div class="nav1">
@@ -89,13 +54,13 @@
                 <div >
                   <div id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
                       <ion-icon class="icon1" name="person-outline" ></ion-icon>
-                      <span><?php echo $userFirstName; ?></span>
+                      <span>Name</span>
                   </div>
                    <!--drop down-->
                     <ul class="dropdown-menu p-1 mt-1" aria-labelledby="dropdownMenuButton1">
                       <li><a class="dropdown-item" href="">Profile</a></li>
-                      <li><a class="dropdown-item" href="">Chnage Password</a></li>
-                      <li><a class="dropdown-item" href="logout.php">Log out</a></li>
+                      <li><a class="dropdown-item" href="">Change Password</a></li>
+                      <li><a class="dropdown-item" href="logout2.php">Log out</a></li>
                       
                     </ul>
                 </div>

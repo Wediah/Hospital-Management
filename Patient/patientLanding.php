@@ -1,6 +1,4 @@
-<?php 
-include './headerP.php';
-?>
+<?php include './headerP.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +9,9 @@ include './headerP.php';
 
 </head>
 <body>
-    <h2>Welcome, <?php echo $userFirstName; ?></h2>
+    <h2>Welcome</h2>
+    
     <script src="./patients2.js"></script>  
 </body>
 </html>
+

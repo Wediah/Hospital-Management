@@ -17,18 +17,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $password = $_POST["password"];
 
     // Perform a SELECT query to check if the user's credentials exist in the database
-    $sql = "SELECT * FROM patients WHERE email='$email' AND password='$password'";
+    $sql = "SELECT * FROM accountant WHERE email='$email' AND password='$password'";
     $result = $conn->query($sql);
 
     if ($result->num_rows === 1) {
         // Login successful
         $_SESSION["loggedin"] = true;
         $_SESSION["email"] = $email;
-        header("Location: patientLanding.php"); // Redirect to the dashboard
+        header("Location: accLp.php"); // Redirect to the dashboard
         exit();
     } else {
         // Login failed
-        echo "Invalid email or password. Please try again ";
+        echo "Invalid email or password.";
     }
 }
 ?>
