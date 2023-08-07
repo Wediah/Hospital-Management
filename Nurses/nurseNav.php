@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doctor</title>
-    <link rel="stylesheet" href="pharmaNav.css">
+    <link rel="stylesheet" href="nurseNav.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
@@ -18,28 +18,22 @@
             
         <a href="#">
             <span class="material-symbols-outlined">
-            assignment_add
+            vital_signs
             </span>
-            <h4>Appointments</h4>
+            <h4>Vital information</h4>
         </a>
         
         <a href="#">
             <span class="material-symbols-outlined">
-            prescriptions
+            ward
             </span>
-            <h4>Prescriptions</h4>
+            <h4>Bed & Ward</h4>
         </a>
         <a href="#">
             <span class="material-symbols-outlined">
             medication
             </span>
             <h4>Medications</h4>
-        </a>
-        <a href="#">
-            <span class="material-symbols-outlined">
-            biotech
-            </span>
-            <h4>Laboratory</h4>
         </a>
         <a href="">
             <span class="material-symbols-outlined">

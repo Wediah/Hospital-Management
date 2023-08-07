@@ -1,0 +1,80 @@
+body {
+    margin-left: 220px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 220px;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: #1b0743;
+    overflow-x: hidden;
+    padding-top: 150px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 12px;}
+  }
+
+  .sidenav a:hover {
+    color: #f1f1f1;
+    background-color: rgb(11, 5, 70);
+  }
+
+  .sidenav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    padding-left: 30px;
+  }
+
+  .image-class {
+    padding: 8px 8px 8px 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .image-class > img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+
+  .image-class > h3 {
+    color:#818181;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .image-class > h3 > span {
+    font-size: 14px;
+    color: white;
+  }
+
+  .log--out {
+    position: relative;
+    bottom: -0px;
+  }
+  
+
+  .links-only {
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  a > h4{
+    font-size: 14px;
+  }
+
+  
