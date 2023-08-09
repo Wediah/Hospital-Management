@@ -9,6 +9,9 @@
 </head>
 <body>
     <h1 class="title">Ayao Medical Center</h1>
+    <button>log out</button>
     <hr>
+
+
 </body>
 </html>
