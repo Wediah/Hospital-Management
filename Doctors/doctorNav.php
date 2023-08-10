@@ -13,28 +13,24 @@
         <img src="/images/hero1.jpg" alt="">
         <h3>Welcome, <span>Emmanuel Wediah</span></h3>
     </div>
+    <hr>
     <div class="links-only">
         
             
-        <a href="#">
+        <a href="./doctorLp.php">
             <span class="material-symbols-outlined">
             assignment_add
             </span>
             <h4>Appointments</h4>
         </a>
-        
-        <a href="#">
+        <hr>
+        <a href="./doctorPres.php">
             <span class="material-symbols-outlined">
             prescriptions
             </span>
             <h4>Prescriptions</h4>
         </a>
-        <a href="#">
-            <span class="material-symbols-outlined">
-            medication
-            </span>
-            <h4>Medications</h4>
-        </a>
+        <hr>
     </div>
 
     <div class="log--out">
@@ -44,6 +40,7 @@
             </span>
             <h4>Profile</h4>
         </a>
+        <hr>
         <a href="./logout3.php">
             
             <span class="material-symbols-outlined">

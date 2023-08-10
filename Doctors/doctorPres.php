@@ -19,13 +19,10 @@
         <span class="material-symbols-outlined">
             arrow_circle_right
         </span>
-        <h3>Appointments</h3>
+        <h3>Prescriptions</h3>
     </div>
     <div>
-        <button class="appt-bttn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">+ Appointment</button>
-    </div>
-    
-
+        <button class="appt-bttn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">+ Prescriptions</button>
     </div>
 
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -39,19 +36,22 @@
                     
                 </div>
                 <div class="modal-body">
-                    <form class="forms1" name="signup" action="./appointment+.php" method="post">
-                        <label for="date">Date</label>
-                        <input type="date" name="date" id="date">
-                        <label for="time">Time</label>
-                        <input type="time" name="time" id="time">
-                        <input type="text" name="name" id="name" placeholder="Full name">
+                    <form class="forms1" name="signup" action="./prescription+.php" method="post">
+                        <input type="date" name="date" id="date" placeholder>
+                        <input type="text" name="name" id="name" placeholder="Patient's Name">
+                        <input type="text" name="age" id="age" placeholder="Patient's Age">
+                        <input type="text" name="gender" id="gender" placeholder="Pateint's gender">
                         <input type="doctor" name="doctor" id="doctor" placeholder="Doctor">
-                        <button type="submit" value="submit" onclick="validateForm()">Add Appointment</button>
+                        <textarea name="prescription" id="prescription" cols="30" rows="10" placeholder="Enter patient prescibtion"></textarea>
+                        <button type="submit" value="submit" onclick="validateForm()">Add Prescriptions</button>
                     
                     </form>
                 </div>
             </div>
         </div>
+    </div>
+    
+
     </div>
 
     <?php
@@ -66,22 +66,24 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "SELECT * FROM appointments";
+    $sql = "SELECT * FROM prescriptions";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         echo "<table>";
-        echo "<tr><th>ID</th><th>Date</th><th>Time</th><th>Name</th><th>Doctor</th></tr>";
+        echo "<tr><th>ID</th><th>Date</th><th>Name</th><th>age</th><th>Gender</th><th>Doctor</th><th>Prescription</th></tr>";
         
         while ($row = $result->fetch_assoc()) {
             echo "<tr>";
             echo "<td>" . $row["id"] . "</td>";
             echo "<td>" . $row["date"] . "</td>";
-            echo "<td>" . $row["time"] . "</td>";
             echo "<td>" . $row["name"] . "</td>";
+            echo "<td>" . $row["age"] . "</td>";
+            echo "<td>" . $row["gender"] . "</td>";
             echo "<td>" . $row["doctor"] . "</td>";
+            echo "<td>" . $row["prescription"] . "</td>";
             echo "<td class='action-buttons'>
-                    <a href='editAppt.php?id=" . $row["id"] . "'>Edit</a>
+                    <a href='editPres.php?id=" . $row["id"] . "'>Edit</a>
                     <a href='deleteAppt.php?id=" . $row["id"] . "'>Delete</a>
                   </td>";
             echo "</tr>";
@@ -94,7 +96,5 @@
 
     $conn->close();
     ?>
-    
-
 </body>
 </html>

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./doctor.css">
 </head>
 <body>
-    <h2>Lucy Mememorial</h2>
+    <h2>Ayao Medical Center</h2>
     <div>
         <h3>Log into your account</h3>
         <hr>
