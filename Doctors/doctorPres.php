@@ -55,7 +55,7 @@
     </div>
 
     <?php
-    $host = "localhost: 3306";
+    $host = "localhost:3306";
     $user = "root";
     $password = "";
     $dbname = "hospitalmanagement";
@@ -71,7 +71,7 @@
 
     if ($result->num_rows > 0) {
         echo "<table>";
-        echo "<tr><th>ID</th><th>Date</th><th>Name</th><th>age</th><th>Gender</th><th>Doctor</th><th>Prescription</th></tr>";
+        echo "<tr><th>Serial Number</th><th>Date</th><th>Name</th><th>age</th><th>Gender</th><th>Doctor</th><th>Prescription</th></tr>";
         
         while ($row = $result->fetch_assoc()) {
             echo "<tr>";
@@ -84,7 +84,7 @@
             echo "<td>" . $row["prescription"] . "</td>";
             echo "<td class='action-buttons'>
                     <a href='editPres.php?id=" . $row["id"] . "'>Edit</a>
-                    <a href='deleteAppt.php?id=" . $row["id"] . "'>Delete</a>
+                    <a href='deletePres.php?id=" . $row["id"] . "'>Delete</a>
                   </td>";
             echo "</tr>";
         }
