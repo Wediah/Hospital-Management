@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($result->num_rows === 1) {
         // Login successful
         $_SESSION["loggedin"] = true;
-        $_SESSION["email"] = $email;
+        $_SESSION["user_email"] = $email;
         header("Location: doctorLp.php"); // Redirect to the dashboard
         exit();
     } else {
@@ -31,4 +31,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         echo "Invalid email or password.";
     }
 }
+
 ?>

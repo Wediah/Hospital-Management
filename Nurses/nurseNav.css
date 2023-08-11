@@ -1,5 +1,43 @@
 body {
     margin-left: 220px;
+    padding: 20px;
+}
+
+.title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.appt {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  color: #818181;
+}
+
+.appt > span {
+  font-weight: 600;
+}
+
+.appt-head {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.appt-bttn {
+color: white;
+background-color: green;
+padding: 5px;
+cursor: pointer;
+border: none;
+border-radius: 5px;
+font-weight: bold;
+align-items: center;
+}
+
+.appt-bttn > span {
+padding-right: 2px;
 }
 
 .sidenav {

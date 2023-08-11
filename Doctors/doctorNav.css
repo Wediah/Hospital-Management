@@ -109,6 +109,11 @@ body {
   border: none;
   border-radius: 5px;
   font-weight: bold;
+  align-items: center;
+}
+
+.appt-bttn > span {
+  padding-right: 2px;
 }
 
 .forms1 {
@@ -175,4 +180,19 @@ tr:nth-child(even) {
 tr:hover {
   background-color: #ddd;
 }
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.details > div {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+}
+
+
   

@@ -10,7 +10,7 @@
 <body>
 <div id="mySidenav" class="sidenav">
     <div class="image-class">
-        <img src="/images/hero1.jpg" alt="">
+        
         <h3>Welcome, <span>Emmanuel Wediah</span></h3>
     </div>
     <hr>
@@ -34,7 +34,7 @@
     </div>
 
     <div class="log--out">
-        <a href="">
+        <a href="./doctorPro.php">
             <span class="material-symbols-outlined">
             person
             </span>
