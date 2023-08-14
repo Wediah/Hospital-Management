@@ -23,7 +23,7 @@
             <h4>Invioce</h4>
         </a>
         <hr>
-        <a href="#">
+        <a href="./pay.php">
             <span class="material-symbols-outlined">
             prescriptions
             </span>

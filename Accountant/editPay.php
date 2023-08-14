@@ -12,25 +12,25 @@ if ($conn->connect_error) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
-    $cdate = $_POST["cdate"];
-    $ddate = $_POST["ddate"];
-    $vat = $_POST["vat"];
-    $discount = $_POST["discount"];
-    $total = $_POST["total"];
+    $date = $_POST["date"];
+    $paymedium = $_POST["paymedium"];
+    $totalbill = $_POST["totalbill"];
+    $paybill = $_POST["paybill"];
+    $balance = $_POST["balance"];
     $status = $_POST["status"];
 
-    $sql = "UPDATE invoice SET name='$name', cdate='$cdate',ddate='$ddate', vat='$vat', discount='$discount', total='$total', status='$status'   WHERE id=$id";
+    $sql = "UPDATE payment SET name='$name', date='$date',paymedium='$paymedium', totalbill='$totalbill', paybill='$paybill', balance='$balance', status='$status'   WHERE id=$id";
 
     if ($conn->query($sql) === TRUE) {
         echo "Record updated successfully!";
-        header("Location: accLp.php");
+        header("Location: pay.php");
     } else {
         echo "Error updating record: " . $conn->error;
     }
 }
 
 $id = $_GET['id'];
-$sql = "SELECT * FROM invoice WHERE id=$id";
+$sql = "SELECT * FROM payment WHERE id=$id";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 
@@ -52,11 +52,11 @@ $conn->close();
         <form method="post" action="">
             <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
             Patient Name: <input type="text" name="name" value="<?php echo $row['name']; ?>"><br>
-            Creation Date: <input type="date" name="cdate" value="<?php echo $row['cdate']; ?>"><br>
-            Due Date: <input type="date" name="ddate" value="<?php echo $row['ddate']; ?>"><br>
-            Vat Percentage: <input type="text" name="vat" value="<?php echo $row['vat']; ?>"><br>
-            Discount: <input type="text" name="discount" value="<?php echo $row['discount']; ?>"><br>
-            Total: <input type="text" name="total" value="<?php echo $row['total']; ?>"><br>
+            Date: <input type="date" name="date" value="<?php echo $row['date']; ?>"><br>
+            Payment Medium: <input type="text" name="paymedium" value="<?php echo $row['paymedium']; ?>"><br>
+            Total Bill: <input type="text" name="totalbill" value="<?php echo $row['totalbill']; ?>"><br>
+            Amount Paid: <input type="text" name="paybill" value="<?php echo $row['paybill']; ?>"><br>
+            Balance: <input type="text" name="balance" value="<?php echo $row['balance']; ?>"><br>
             Status: <input type="text" name="status" value="<?php echo $row['status']; ?>"><br>
             <input type="submit" value="Save">
         </form>
