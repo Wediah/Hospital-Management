@@ -72,6 +72,8 @@ padding-right: 2px;
     align-items: center;
     gap: 5px;
     padding-left: 30px;
+    padding-top: 2px;
+    padding-bottom: 2px;
   }
 
   .image-class {
@@ -113,6 +115,71 @@ padding-right: 2px;
 
   a > h4{
     font-size: 14px;
+  }
+
+  .forms1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: Fredoka;
+  }
+  
+  
+  
+  .forms1 > input {
+    border-radius: 5px;
+  border: 1px solid #9B9999;
+  background: #FFF;
+  height: 30px;
+  padding: 5px;
+  }
+  
+  .forms1 > label {
+    color: #9B9999;
+  font-family: Fredoka;
+  }
+  
+  .forms1 > button {
+    border-radius: 5px;
+  background: #699BF7;
+  border: none;
+  height: 30px;
+  color: white;
+  font-weight: 600;
+  line-height: normal;
+  }
+  
+  .forms1 > button:hover {
+    background-color: #699bf7c9;
+  }
+  
+  .modal-header > span {
+    cursor: pointer;
+  }
+  
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #ddd;
   }
 
   

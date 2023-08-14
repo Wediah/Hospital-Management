@@ -19,10 +19,10 @@
             <span class="material-symbols-outlined">
                 arrow_circle_right
             </span>
-            <h3>Vitals</h3>
+            <h3>Bed & Ward</h3>
         </div>
         <div>
-            <button class="appt-bttn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Record Vitals</button>
+            <button class="appt-bttn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Allocate Bed</button>
         </div>
     </div>
 
@@ -37,14 +37,12 @@
                     
                 </div>
                 <div class="modal-body">
-                    <form class="forms1" name="signup" action="./vitals+.php" method="post">
+                    <form class="forms1" name="signup" action="./bed+.php" method="post">
                         <input type="text" name="name" id="name" placeholder="Patient Name">
-                        <input type="text" name="temperature" id="temperature" placeholder="Temperature">
-                        <input type="text" name="bloodpressure" id="bloodpressure" placeholder="Blood Pressure">
-                        <input type="text" name="weight" id="weight" placeholder="Weight">
-                        <input type="text" name="height" id="height" placeholder="Height">
-                        <input type="text" name="bloodsugar" id="bloodsugar" placeholder="Blood Sugar">
-                        <input type="text" name="heartrate" id="heartrate" placeholder="Heart Rate">
+                        <input type="text" name="ward" id="ward" placeholder="Ward">
+                        <input type="text" name="bedno" id="bedno" placeholder="Bed Number">
+                        <input type="date" name="allocate" id="allocate" placeholder="Allocation Date">
+                        <input type="date" name="discharge" id="discharge" placeholder="Discharge">
                         <button type="submit" value="submit" onclick="validateForm()">Add Appointment</button>
                     
                     </form>
@@ -66,26 +64,24 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "SELECT * FROM vitals";
+    $sql = "SELECT * FROM bed";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         echo "<table>";
-        echo "<tr><th>ID</th><th>Patient Name</th><th>Temperature</th><th>BP</th><th>Weight</th> <th>Height</th><th>Blood Sugar</th><th>Heart Rate</th></tr>";
+        echo "<tr><th>ID</th><th>Patient Name</th><th>Ward</th><th>Bed Number</th><th>Allocation date</th> <th>Discharge Date</th></tr>";
         
         while ($row = $result->fetch_assoc()) {
             echo "<tr>";
             echo "<td>" . $row["id"] . "</td>";
             echo "<td>" . $row["name"] . "</td>";
-            echo "<td>" . $row["temperature"] . "</td>";
-            echo "<td>" . $row["bloodpressure"] . "</td>";
-            echo "<td>" . $row["weight"] . "</td>";
-            echo "<td>" . $row["height"] . "</td>";
-            echo "<td>" . $row["bloodpressure"] . "</td>";
-            echo "<td>" . $row["heartrate"] . "</td>";
+            echo "<td>" . $row["ward"] . "</td>";
+            echo "<td>" . $row["bedno"] . "</td>";
+            echo "<td>" . $row["allocate"] . "</td>";
+            echo "<td>" . $row["dellocate"] . "</td>";
             echo "<td class='action-buttons'>
-                    <a href='editVit.php?id=" . $row["id"] . "'>Edit</a>
-                    <a href='deleteVit.php?id=" . $row["id"] . "'>Delete</a>
+                    <a href='editBed.php?id=" . $row["id"] . "'>Edit</a>
+                    <a href='deleteBed.php?id=" . $row["id"] . "'>Delete</a>
                   </td>";
             echo "</tr>";
         }

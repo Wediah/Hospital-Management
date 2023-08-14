@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $phone = $_POST['phone'];
 
-    $sql = "UPDATE doctor SET name='$name', department='$tdepartment', email='$email', phone='$phone' WHERE id=$id";
+    $sql = "UPDATE doctor SET fullname='$name', department='$department', email='$email', phone='$phone' WHERE id=$id";
 
     if ($conn->query($sql) === TRUE) {
         echo "Record updated successfully!";
@@ -35,26 +35,4 @@ $row = $result->fetch_assoc();
 $conn->close();
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Edit Data</title>
-    <link rel="stylesheet" href="./doctor.css">
-    <script src="./doctor.js"></script>
-</head>
-<body>
-    <h2>Ayao Medical Center</h2>
-    <div>
-        <h3>Edit Profile</h3>
-        <hr>
-        <form method="post" action="">
-            <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-            Name: <input type="text" name="fullname" value="<?php echo $row['fullname']; ?>"><br>
-            Department: <input type="text" name="department" value="<?php echo $row['department']; ?>"><br>
-            Email: <input type="text" name="email" value="<?php echo $row['email']; ?>"><br>
-            Phone: <input type="text" name="phone" value="<?php echo $row['phone']; ?>"><br>
-            <input type="submit" value="Save">
-        </form>
-    </div>
-</body>
-</html>
+

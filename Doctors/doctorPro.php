@@ -20,7 +20,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$id = $_SESSION['user_email'];
+$email = $_SESSION['user_email'];
 $sql = "SELECT * FROM doctor WHERE email = '$user_email'";
 $result = $conn->query($sql);
 
@@ -46,15 +46,15 @@ $conn->close();
 </head>
 <body>
     <h1>User Profile</h1>
-    <form method="post" action="update_profile.php"> <!-- Action should point to a script that handles form updates -->
+    <form method="post" action=""> <!-- Action should point to a script that handles form updates -->
         <label for="username">Username:</label>
-        <input type="text" id="fullname" name="fullname" value="<?php echo $user_data['fullname']; ?>" disabled>
+        <input type="text" id="fullname" name="fullname" value="<?php echo $user_data['fullname']; ?>">
         
         <label for="department">Department:</label>
-        <input type="text" id="department" name="department" value=" <?php echo $user_data['department']; ?>" disabled>
+        <input type="text" id="department" name="department" value=" <?php echo $user_data['department']; ?>">
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" value=" <?php echo $user_data['email']; ?>" disabled>
+        <input type="email" id="email" name="email" value=" <?php echo $user_data['email']; ?>">
         
         <label for="phone">Phone Number:</label>
         <input type="text" id="phone" name="phone" value=" <?php echo $user_data['phone']; ?>">
