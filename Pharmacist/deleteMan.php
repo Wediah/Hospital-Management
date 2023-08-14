@@ -14,11 +14,11 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     $id = $_GET['id'];
 } else {
     $conn->close();
-    header("Location: doctorLp.php");
+    header("Location: manage.php");
     exit();
 }
 
-$sql = "DELETE FROM vitals WHERE id = $id";
+$sql = "DELETE FROM manage WHERE id = $id";
 
 if ($conn->query($sql) === TRUE) {
     // Deletion successful
@@ -27,6 +27,6 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
-header("Location: nurseLp.php"); 
+header("Location: manage.php"); 
 exit();
 ?>

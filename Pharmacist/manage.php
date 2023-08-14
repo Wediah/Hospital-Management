@@ -22,7 +22,7 @@
             <h3>Medicine Category</h3>
         </div>
         <div>
-            <button class="appt-bttn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">+ Add Medicine Category</button>
+            <button class="appt-bttn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">+ Add Medicine</button>
         </div>
     </div>
 
@@ -37,9 +37,15 @@
                     
                 </div>
                 <div class="modal-body">
-                    <form class="forms1" name="signup" action="./medCat+.php" method="post">
+                    <form class="forms1" name="signup" action="./manage+.php" method="post">
                         <input type="text" name="name" id="name" placeholder="Medicine">
                         <input type="text" name="category" id="category" placeholder="Category">
+                        <input type="text" name="price" id="price" placeholder="Price">
+                        <input type="text" name="quantity" id="quantity" placeholder="Quantity">
+                        <input type="text" name="sold" id="sold" placeholder="Sold Quantity">
+                        <input type="text" name="company" id="campany" placeholder="Manufacturer">
+                        <input type="date" name="mandate" id="mandate" placeholder="Manufactured Date">
+                        <input type="date" name="expiry" id="expiry" placeholder="Expiry Date">
                         <button type="submit" value="submit" onclick="validateForm()">Add Medicine</button>
                     
                     </form>
@@ -60,21 +66,26 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "SELECT * FROM medcat";
+    $sql = "SELECT * FROM manage";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         echo "<table>";
-        echo "<tr><th>ID</th><th>Medicne</th><th>Category</th></tr>";
+        echo "<tr><th>ID</th><th>Medicne</th><th>Category</th><th>Price</th><th>Total Quantity</th><th>Sold Quantity</th><th>Manufacturer</th><th>Manufactured Date</th><th>Expiry Date</th></tr>";
         
         while ($row = $result->fetch_assoc()) {
             echo "<tr>";
             echo "<td>" . $row["id"] . "</td>";
             echo "<td>" . $row["name"] . "</td>";
             echo "<td>" . $row["category"] . "</td>";
+            echo "<td>" . $row["quantity"] . "</td>";
+            echo "<td>" . $row["sold"] . "</td>";
+            echo "<td>" . $row["manufacturer"] . "</td>";
+            echo "<td>" . $row["mandate"] . "</td>";
+            echo "<td>" . $row["expiry"] . "</td>";
             echo "<td class='action-buttons'>
-                    <a href='editCat.php?id=" . $row["id"] . "'>Edit</a>
-                    <a href='deleteCat.php?id=" . $row["id"] . "'>Delete</a>
+                    <a href='editMan.php?id=" . $row["id"] . "'>Edit</a>
+                    <a href='deleteMan.php?id=" . $row["id"] . "'>Delete</a>
                   </td>";
             echo "</tr>";
         }

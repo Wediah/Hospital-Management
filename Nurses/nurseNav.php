@@ -30,18 +30,18 @@
             <h4>Bed & Ward</h4>
         </a>
         <hr>
-        <a href="#">
+        <a href="./meds.php">
             <span class="material-symbols-outlined">
             medication
             </span>
             <h4>Medications</h4>
         </a>
         <hr>
-        <a href="">
+        <a href="./reports.php">
             <span class="material-symbols-outlined">
             surgical
             </span>
-            <h4>Surgery</h4>
+            <h4>Surgery Report</h4>
         </a>
         <hr>
     </div>
