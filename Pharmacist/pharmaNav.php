@@ -24,18 +24,18 @@
         </a>
         <hr>
         
-        <a href="manage.php">
+        <a href="./manage.php">
             <span class="material-symbols-outlined">
             prescriptions
             </span>
             <h4>Manage Medicines</h4>
         </a>
         <hr>
-        <a href="#">
+        <a href="./pres.php">
             <span class="material-symbols-outlined">
             pill
             </span>
-            <h4>Medicine Sales</h4>
+            <h4>Prescribed Meds </h4>
         </a>
         <hr>
     </div>
