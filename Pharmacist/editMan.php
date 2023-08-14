@@ -14,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = $_POST['id'];
     $name = $_POST["name"];
     $category = $_POST["category"];
+    $price = $_POST["price"];
     $quantity = $_POST["quantity"];
     $manufacturer = $_POST["manufacturer"];
     $mandate = $_POST["mandate"];
@@ -21,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $expiry = $_POST["expiry"];
   
 
-    $sql = "UPDATE manage SET name='$name', category='$category', quantity='$quantity',  sold='$sold', manufacturer= '$manfacturer',mandate='$mandate', expiry='$expiry'  WHERE id=$id";
+    $sql = "UPDATE manage SET name='$name', category='$category', price='$price', quantity='$quantity',  sold='$sold', manufacturer= '$manfacturer',mandate='$mandate', expiry='$expiry'  WHERE id=$id";
 
     if ($conn->query($sql) === TRUE) {
         echo "Record updated successfully!";
@@ -55,6 +56,7 @@ $conn->close();
             <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
             Full Name: <input type="text" name="name" value="<?php echo $row['name']; ?>"><br>
             Category: <input type="text" name="category" value="<?php echo $row['category']; ?>"><br>
+            Price: <input type="text" name="price" value="<?php echo $row['price']; ?>"><br>
             Total Quantity: <input type="text" name="quantity" value="<?php echo $row['quantity']; ?>"><br>
             Quantity Sold: <input type="text" name="sold" value="<?php echo $row['sold']; ?>"><br>
             Manufacturer Date: <input type="date" name="mandate" value="<?php echo $row['mandate']; ?>"><br>

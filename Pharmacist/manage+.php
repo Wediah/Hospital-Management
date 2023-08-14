@@ -14,13 +14,14 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = $_POST["name"];
         $category = $_POST["category"];
+        $price = $_POST["price"];
         $quantity = $_POST["quantity"];
         $manufacturer = $_POST["manufacturer"];
         $mandate = $_POST["mandate"];
         $sold = $_POST["sold"];
         $expiry = $_POST["expiry"];
 
-        $sql = "INSERT INTO manage (name, category, quantity, manufacturer, mandate, sold, expiry) VALUES ('$name', '$category', '$quantity', '$manufacturer', '$mandate', '$sold', '$expiry')";
+        $sql = "INSERT INTO manage (name, category, price, quantity, manufacturer, mandate, sold, expiry) VALUES ('$name', '$category', '$price', '$quantity', '$manufacturer', '$mandate', '$sold', '$expiry')";
 
         if (mysqli_query($conn,$sql)){
             header("Location: bed.php");

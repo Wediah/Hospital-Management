@@ -78,6 +78,7 @@
             echo "<td>" . $row["id"] . "</td>";
             echo "<td>" . $row["name"] . "</td>";
             echo "<td>" . $row["category"] . "</td>";
+            echo "<td>" . $row["price"] . "</td>";
             echo "<td>" . $row["quantity"] . "</td>";
             echo "<td>" . $row["sold"] . "</td>";
             echo "<td>" . $row["manufacturer"] . "</td>";
