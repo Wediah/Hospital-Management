@@ -65,7 +65,7 @@
 
     if ($result->num_rows > 0) {
         echo "<table>";
-        echo "<tr><th>ID</th><th>Medicne</th><th>Category</th></tr>";
+        echo "<tr><th>ID</th><th>Medicine</th><th>Category</th></tr>";
         
         while ($row = $result->fetch_assoc()) {
             echo "<tr>";
