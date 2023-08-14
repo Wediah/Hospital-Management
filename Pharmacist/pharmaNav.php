@@ -48,7 +48,7 @@
             <h4>Profile</h4>
         </a>
         <hr>
-        <a href="./logout3.php">
+        <a href="./logout4.php">
             
             <span class="material-symbols-outlined">
             logout
