@@ -8,6 +8,6 @@ session_unset();
 session_destroy();
 
 // Redirect to the login page after logout
-header("Location: nurseSignin.php");
+header("Location: accSignin.php");
 exit();
 ?>

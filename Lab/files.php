@@ -19,7 +19,7 @@
             <span class="material-symbols-outlined">
                 arrow_circle_right
             </span>
-            <h3>Lab Request</h3>
+            <h3>Report Files</h3>
         </div>
     </div>
 
@@ -40,7 +40,7 @@
 
     if ($result->num_rows > 0) {
         echo "<table>";
-        echo "<tr><th>Patient ID</th><th>Date</th><th>Patient Name</th><th>Doctor</th><th>Test Type</th><th>Due Date</th><th>Report</th></tr>";
+        echo "<tr><th>Patient ID</th><th>Date</th><th>Patient Name</th><th>Doctor</th><th>Scan Type</th><th>Due Date</th><th>Report</th></tr>";
         
         while ($row = $result->fetch_assoc()) {
             echo "<tr>";
@@ -64,5 +64,6 @@
 
     $conn->close();
     ?>
+    
 </body>
 </html>

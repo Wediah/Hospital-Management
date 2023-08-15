@@ -31,6 +31,13 @@
             <h4>Prescriptions</h4>
         </a>
         <hr>
+        <a href="./labReport.php">
+            <span class="material-symbols-outlined">
+            lab_profile
+            </span>
+            <h4>Lab Request</h4>
+        </a>
+        <hr>
     </div>
 
     <div class="log--out">

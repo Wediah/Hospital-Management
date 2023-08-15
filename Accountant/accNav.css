@@ -179,3 +179,20 @@ tr:nth-child(even) {
 tr:hover {
   background-color: #ddd;
 }
+
+.form2 {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  background-color: white;
+}
+
+.form2 > input {
+  border-radius: 5px;
+}
+
+.bttn4 {
+  background-color: rgb(14, 150, 14);
+  color: white;
+  border: none;
+}

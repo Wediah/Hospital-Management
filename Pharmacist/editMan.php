@@ -59,6 +59,7 @@ $conn->close();
             Price: <input type="text" name="price" value="<?php echo $row['price']; ?>"><br>
             Total Quantity: <input type="text" name="quantity" value="<?php echo $row['quantity']; ?>"><br>
             Quantity Sold: <input type="text" name="sold" value="<?php echo $row['sold']; ?>"><br>
+            Manufacturer: <input type="text" name="manufacturer" value="<?php echo $row['manufacturer']; ?>"><br>
             Manufacturer Date: <input type="date" name="mandate" value="<?php echo $row['mandate']; ?>"><br>
             Expiry Date: <input type="date" name="expiry" value="<?php echo $row['expiry']; ?>"><br>
             <input type="submit" value="Save">

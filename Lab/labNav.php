@@ -10,31 +10,26 @@
 <body>
 <div id="mySidenav" class="sidenav">
     <div class="image-class">
-        <img src="/images/hero1.jpg" alt="">
         <h3>Welcome, <span>Emmanuel Wediah</span></h3>
     </div>
+    <hr>
     <div class="links-only">
         
             
-        <a href="#">
+        <a href="./labLp.php">
             <span class="material-symbols-outlined">
-            assignment_add
+                stethoscope
             </span>
             <h4>Doctor's request</h4>
         </a>
-        
-        <a href="#">
+        <hr>
+        <a href="./files.php">
             <span class="material-symbols-outlined">
-            prescriptions
-            </span>
-            <h4>Diagnostic report</h4>
-        </a>
-        <a href="#">
-            <span class="material-symbols-outlined">
-            medication
+            lab_profile
             </span>
             <h4>Report files</h4>
         </a>
+        <hr>
     </div>
 
     <div class="log--out">
@@ -44,7 +39,8 @@
             </span>
             <h4>Profile</h4>
         </a>
-        <a href="./logout3.php">
+        <hr>
+        <a href="./logout5.php">
             
             <span class="material-symbols-outlined">
             logout

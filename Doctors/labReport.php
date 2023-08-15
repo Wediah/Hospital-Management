@@ -1,4 +1,4 @@
-<?php include './pharmaNav.php'?>
+<?php include './doctorNav.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +7,8 @@
     <title>AMC</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./pharmaNav.css">
-    <script src="./pharma.js"></script>
+    <link rel="stylesheet" href="doctorNav.css">
+    <script src="./doctor.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
@@ -19,10 +19,10 @@
             <span class="material-symbols-outlined">
                 arrow_circle_right
             </span>
-            <h3>Medicine Category</h3>
+            <h3>Lab Request</h3>
         </div>
         <div>
-            <button class="appt-bttn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">+ Add Medicine</button>
+            <button class="appt-bttn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">+ Add Lab Request</button>
         </div>
     </div>
 
@@ -37,18 +37,16 @@
                     
                 </div>
                 <div class="modal-body">
-                    <form class="forms1" name="signup" action="./manage+.php" method="post">
-                        <input type="text" name="name" id="name" placeholder="Medicine">
-                        <input type="text" name="category" id="category" placeholder="Category">
-                        <input type="text" name="price" id="price" placeholder="Price">
-                        <input type="text" name="quantity" id="quantity" placeholder="Quantity">
-                        <input type="text" name="sold" id="sold" placeholder="Sold Quantity">
-                        <input type="text" name="manufacturer" id="manufacturer" placeholder="Manufacturer">
-                        <label for="mandate">Manufacture Date</label>
-                        <input type="date" name="mandate" id="mandate" placeholder="Manufactured Date">
-                        <label for="expiry">Expiry Date</label>
-                        <input type="date" name="expiry" id="expiry" placeholder="Expiry Date">
-                        <button type="submit" value="submit" onclick="validateForm()">Add Medicine</button>
+                    <form class="forms1" name="signup" action="./lab+.php" method="post">
+                        <label for="date">Date</label>
+                        <input type="date" name="date" id="date">
+                        <input type="text" name="name" id="name" placeholder="Patient Name">
+                        <input type="text" name="doctor" id="doctor" placeholder="Doctor">
+                        <input type="text" name="test" id="test" placeholder="Test Type">
+                        <label for="ddate">Due Date</label>
+                        <input type="date" name="ddate" id="ddate">
+                        <textarea name="report" id="report" placeholder="Lap Report"></textarea>
+                        <button type="submit" value="submit" onclick="validateForm()">Request</button>
                     
                     </form>
                 </div>
@@ -68,27 +66,25 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "SELECT * FROM manage";
+    $sql = "SELECT * FROM labreq";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         echo "<table>";
-        echo "<tr><th>ID</th><th>Medicne</th><th>Category</th><th>Price</th><th>Total Quantity</th><th>Sold Quantity</th><th>Manufacturer</th><th>Manufactured Date</th><th>Expiry Date</th></tr>";
+        echo "<tr><th>Patient ID</th><th>Date</th><th>Patient Name</th><th>Doctor</th><th>Test Type</th><th>Due Date</th><th>Report</th></tr>";
         
         while ($row = $result->fetch_assoc()) {
             echo "<tr>";
             echo "<td>" . $row["id"] . "</td>";
+            echo "<td>" . $row["date"] . "</td>";
             echo "<td>" . $row["name"] . "</td>";
-            echo "<td>" . $row["category"] . "</td>";
-            echo "<td>" . $row["price"] . "</td>";
-            echo "<td>" . $row["quantity"] . "</td>";
-            echo "<td>" . $row["sold"] . "</td>";
-            echo "<td>" . $row["manufacturer"] . "</td>";
-            echo "<td>" . $row["mandate"] . "</td>";
-            echo "<td>" . $row["expiry"] . "</td>";
+            echo "<td>" . $row["doctor"] . "</td>";
+            echo "<td>" . $row["test"] . "</td>";
+            echo "<td>" . $row["ddate"] . "</td>";
+            echo "<td>" . $row["report"] . "</td>";
             echo "<td class='action-buttons'>
-                    <a href='editMan.php?id=" . $row["id"] . "'>Edit</a>
-                    <a href='deleteMan.php?id=" . $row["id"] . "'>Delete</a>
+                    <a href='editLab1.php?id=" . $row["id"] . "'>Edit</a>
+                    <a href='deleteLab1.php?id=" . $row["id"] . "'>Delete</a>
                   </td>";
             echo "</tr>";
         }

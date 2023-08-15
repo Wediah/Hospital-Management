@@ -44,7 +44,7 @@
                         <input type="text" name="discount" id="discount" placeholder="Discount">
                         <input type="text" name="total" id="total" placeholder="Total Bill">
                         <input type="text" name="status" id="status" placeholder="Status">
-                        <button type="submit" value="submit" onclick="validateForm()">Add Medicine</button>
+                        <button type="submit" value="submit" onclick="validateForm()">Add Invoice</button>
                     
                     </form>
                 </div>

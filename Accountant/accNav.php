@@ -25,14 +25,14 @@
         <hr>
         <a href="./pay.php">
             <span class="material-symbols-outlined">
-            prescriptions
+            account_balance
             </span>
             <h4>Payments</h4>
         </a>
         <hr>
-        <a href="#">
+        <a href="./phistory.php">
             <span class="material-symbols-outlined">
-            medication
+            history
             </span>
             <h4>Payment history</h4>
         </a>
@@ -47,7 +47,7 @@
             <h4>Profile</h4>
         </a>
         <hr>
-        <a href="./logout3.php">
+        <a href="./logout6.php">
             
             <span class="material-symbols-outlined">
             logout
