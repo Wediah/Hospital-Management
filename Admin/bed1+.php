@@ -1,4 +1,4 @@
-<?php
+<?php 
     $host = "localhost:3306";
     $user = "root";
     $pass = "";
@@ -12,15 +12,16 @@
     echo 'Connected successfully';
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $fname = $_POST["fname"];
-        $email = $_POST["email"];
-        $phone = $_POST["phone"];
-        $password = $_POST["password"];
+        $name = $_POST["name"];
+        $ward = $_POST["ward"];
+        $bedno = $_POST["bedno"];
+        $allocate = $_POST["allocate"];
+        $dellocate = $_POST["dellocate"];
 
-        $sql = "INSERT INTO admin (fullname, email, phone, password) VALUES ('$fname', '$email', '$phone', '$password')";
+        $sql = "INSERT INTO bed (name, ward, bedno, allocate, dellocate) VALUES ('$name', '$ward', '$bedno', '$allocate', '$dellocate')";
 
         if (mysqli_query($conn,$sql)){
-            header("Location: accSignin.php");
+            header("Location: adminLp.php");
             exit();
         } else {
             header("Location: error.php");

@@ -195,3 +195,9 @@ align-items: center;
 }
 
 
+.forms {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 60%;
+} 

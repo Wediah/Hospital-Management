@@ -33,7 +33,7 @@
     </div>
 
     <div class="log--out">
-        <a href="">
+        <a href="./labPro.php">
             <span class="material-symbols-outlined">
             person
             </span>

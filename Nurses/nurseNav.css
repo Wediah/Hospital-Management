@@ -50,7 +50,7 @@ padding-right: 2px;
     background-color: #1b0743;
     overflow-x: hidden;
     padding-top: 150px;
-  }
+}
 
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
@@ -182,4 +182,9 @@ padding-right: 2px;
     background-color: #ddd;
   }
 
-  
+  .forms {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 60%;
+  } 

@@ -11,26 +11,39 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $id = $_POST['id'];
+    
     $name = $_POST['fullname'];
     $department = $_POST['department'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
+    $password = $_POST['password'];
 
-    $sql = "UPDATE doctor SET fullname='$name', department='$department', email='$email', phone='$phone' WHERE id=$id";
+    $sql = "UPDATE doctor SET fullname='$name', department='$department', email='$email', phone='$phone', password='$password' WHERE fullname=$name";
 
     if ($conn->query($sql) === TRUE) {
         echo "Record updated successfully!";
-        header("Location: doctorLp.php");
+        header("Location: doctorPro.php");
     } else {
         echo "Error updating record: " . $conn->error;
     }
 }
 
-$id = $_GET['id'];
-$sql = "SELECT * FROM doctor WHERE id=$id";
-$result = $conn->query($sql);
-$row = $result->fetch_assoc();
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    echo "Doctor ID: $id";
+    $sql = "SELECT * FROM doctor WHERE id=$id";
+    $result = $conn->query($sql);
+
+    if ($result && $result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+    } else {
+        echo "Doctor data not found.";
+        exit();
+    }
+} else {
+    echo "Doctor ID not provided.";
+    exit();
+}
 
 $conn->close();
 ?>

@@ -19,7 +19,7 @@
             <span class="material-symbols-outlined">
                 arrow_circle_right
             </span>
-            <h3>Medicine Category</h3>
+            <h3>Manage Medicine</h3>
         </div>
         <div>
             <button class="appt-bttn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">+ Add Medicine</button>

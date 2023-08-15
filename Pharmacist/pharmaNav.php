@@ -41,7 +41,7 @@
     </div>
 
     <div class="log--out">
-        <a href="">
+        <a href="./pharmaPro.php">
             <span class="material-symbols-outlined">
             person
             </span>

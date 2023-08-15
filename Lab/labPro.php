@@ -1,11 +1,11 @@
 
 <?php
 session_start();
-include './doctorNav.php';
+include './labNav.php';
 
 
 if (!isset($_SESSION['user_email'])) {
-    header("Location: doctorSignin.php");
+    header("Location: labSignin.php");
     exit();
 }
 
@@ -23,12 +23,11 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = $_POST['id'];
     $name = $_POST['fullname'];
-    $department = $_POST['department'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $password = $_POST['password'];
 
-    $sql = "UPDATE doctor SET fullname='$name', department='$department', email='$email', phone='$phone', password='$password' WHERE id=$id";
+    $sql = "UPDATE lab SET fullname='$name',  email='$email', phone='$phone', password='$password' WHERE id=$id";
 
     if ($conn->query($sql) === TRUE) {
         echo "";
@@ -38,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $email = $_SESSION['user_email'];
-$sql = "SELECT * FROM doctor WHERE email = '$email'";
+$sql = "SELECT * FROM lab WHERE email = '$email'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -57,8 +56,8 @@ $conn->close();
     <title>AMC</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./doctorNav.css">
-    <script src="./doctor.js"></script>
+    <link rel="stylesheet" href="./labNav.css">
+    <script src="./lab.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
@@ -76,9 +75,6 @@ $conn->close();
         <input type="hidden" name="id" value="<?php echo $user_data['id']; ?>">
         <label for="username">Username:</label>
         <input type="text" id="fullname" name="fullname" value="<?php echo $user_data['fullname']; ?>">
-        
-        <label for="department">Department:</label>
-        <input type="text" id="department" name="department" value=" <?php echo $user_data['department']; ?>">
 
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" value=" <?php echo $user_data['email']; ?>">
