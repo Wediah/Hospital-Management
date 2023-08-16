@@ -3,7 +3,7 @@ nav{
     z-index: 10;
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     width: 100%;
-    
+    position:fixed;
 }
 
 
@@ -250,6 +250,7 @@ a {
 .body-body {
     margin-left: 30px;
     margin-right: 30px;
+    margin-bottom: 30px;
 }
 
 .reports {
@@ -482,6 +483,14 @@ a {
   tr:hover {
   background-color: #ddd;
   }
+
+  td > a {
+    background-color: rgb(11, 136, 11);
+    color: white !important;
+    padding: 2px;
+    border-radius: 2px;
+
+  }
   
   .details {
   display: flex;
@@ -502,6 +511,18 @@ a {
     gap: 8px;
     width: 60%;
   } 
+
+  .repdiv {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .repdiv1 {
+    background-color: white;
+    padding: 10px;
+    border-radius: 4px;
+  }
 
 
 
