@@ -1,16 +1,48 @@
+<?php 
+session_start();
+
+if (!isset($_SESSION['user_email'])) {
+    header("Location: nurseSignin.php");
+    exit();
+}
+
+$host = "localhost:3306";
+$user = "root";
+$pass = "";
+$dbname = "hospitalmanagement";
+
+$conn = new mysqli($host, $user, $pass, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$email = $_SESSION['user_email'];
+$sql = "SELECT * FROM nurse WHERE email = '$email'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    $user_data = $result->fetch_assoc();
+} else {
+    echo "User data not found.";
+    exit();
+}
+
+$conn->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doctor</title>
+    <title>AMC</title>
     <link rel="stylesheet" href="nurseNav.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
 <div id="mySidenav" class="sidenav">
     <div class="image-class">
-        <h3>Welcome, <span>Emmanuel Wediah</span></h3>
+        <h3>Welcome,<span><?php echo $user_data['fullname']; ?></span></h3>
     </div>
     <hr>
     <div class="links-only">

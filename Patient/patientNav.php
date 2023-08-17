@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['user_email'])) {
-    header("Location: labSignin.php");
+    header("Location: patientSignin.php");
     exit();
 }
 
@@ -18,7 +18,7 @@ if ($conn->connect_error) {
 }
 
 $email = $_SESSION['user_email'];
-$sql = "SELECT * FROM lab WHERE email = '$email'";
+$sql = "SELECT * FROM patients WHERE email = '$email'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -35,44 +35,73 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doctor</title>
-    <link rel="stylesheet" href="labNav.css">
+    <title>AMC</title>
+    <link rel="stylesheet" href="patientNav.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
 <div id="mySidenav" class="sidenav">
     <div class="image-class">
-        <h3>Welcome, <span><?php echo $user_data['fullname']; ?></span></h3>
+        <h3>Welcome,</h3>
+        <span><?php echo $user_data['lname']; ?></span>
     </div>
     <hr>
     <div class="links-only">
         
             
-        <a href="./labLp.php">
+        <a href="">
             <span class="material-symbols-outlined">
-                stethoscope
+            book_online
             </span>
-            <h4>Doctor's request</h4>
+            <h4>Appointments</h4>
         </a>
         <hr>
-        <a href="./files.php">
+        <a href="">
             <span class="material-symbols-outlined">
-            lab_profile
+            prescriptions
             </span>
-            <h4>Report files</h4>
+            <h4>Prescription</h4>
+        </a>
+        <hr>
+        <a href="">
+            <span class="material-symbols-outlined">
+            medication
+            </span>
+            <h4>Medications</h4>
+        </a>
+        <hr>
+        <a href="">
+            <span class="material-symbols-outlined">
+            stethoscope
+            </span>
+            <h4>Doctor List</h4>
+        </a>
+        <hr>
+        <a href="">
+            <span class="material-symbols-outlined">
+            surgical
+            </span>
+            <h4>Operation History</h4>
+        </a>
+        <hr>
+        <a href="">
+            <span class="material-symbols-outlined">
+            ward
+            </span>
+            <h4>Admission History</h4>
         </a>
         <hr>
     </div>
 
     <div class="log--out">
-        <a href="./labPro.php">
+        <a href="">
             <span class="material-symbols-outlined">
             person
             </span>
             <h4>Profile</h4>
         </a>
         <hr>
-        <a href="./logout5.php">
+        <a href="./logout2.php">
             
             <span class="material-symbols-outlined">
             logout

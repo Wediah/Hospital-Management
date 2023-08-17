@@ -1,3 +1,35 @@
+<?php 
+session_start();
+
+if (!isset($_SESSION['user_email'])) {
+    header("Location: pharmaSignin.php");
+    exit();
+}
+
+$host = "localhost:3306";
+$user = "root";
+$pass = "";
+$dbname = "hospitalmanagement";
+
+$conn = new mysqli($host, $user, $pass, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$email = $_SESSION['user_email'];
+$sql = "SELECT * FROM pharma WHERE email = '$email'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    $user_data = $result->fetch_assoc();
+} else {
+    echo "User data not found.";
+    exit();
+}
+
+$conn->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +42,7 @@
 <body>
 <div id="mySidenav" class="sidenav">
     <div class="image-class">
-        <h3>Welcome, <span>Emmanuel Wediah</span></h3>
+        <h3>Welcome, <span><?php echo $user_data['fullname']; ?></span></h3>
     </div>
     <hr>
     <div class="links-only">
