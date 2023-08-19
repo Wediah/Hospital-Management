@@ -5,14 +5,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucy Mememorial</title>
+    <title>AMC</title>
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
     <div class="greet">
         <h1>
-            Welcome to Lucy Mememorial!
+            Welcome to Ayao Medical Center!
         </h1>
         <p>Kindly log into the respective module to access information.</p>
     </div>
