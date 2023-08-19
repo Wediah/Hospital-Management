@@ -15,26 +15,26 @@
 <body class="body--4">
     <h2>Get In Touch With Our Professionals</h2>
     <p>Kindly fill this form, our team will gt back to you ASAP!</p>
-    <form  class="forms4" action="">
+    <form  class="forms4" action="./contact+.php">
         <div>
             <label for="fname">First name</label>
-            <input class="item1" type="text" name="" id="">
+            <input class="item1" type="text" name="fname" id="fname">
         </div>
         <div>
             <label for="lname">Last name</label>
-            <input type="text" name="" id="">
+            <input type="text" name="lname" id="lname">
         </div>
         <div>
             <label for="email">Email address</label>
-            <input type="text" name="" id="" >
+            <input type="text" name="email" id="email" >
         </div>
         <div>
             <label for="phone">Phone number</label>
-            <input type="text" name="" id="" >
+            <input type="text" name="phone" id="phone" >
         </div>
         <div class="item5">
             <label for="message">Message</label>
-            <textarea  name="" id="" cols="25" rows="10" ></textarea>
+            <textarea  name="message" id="message" cols="25" rows="10" ></textarea>
         </div>
         <input class="item6" type="submit" value="Send message">
     </form>
