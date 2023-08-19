@@ -16,12 +16,12 @@
         $lname = $_POST["lname"];
         $email = $_POST["email"];
         $phone = $_POST["phone"];
-        $dob  = $_POST["message"];
+        $message  = $_POST["message"];
 
         $sql = "INSERT INTO contact (fname,lname, email, phone,message) VALUES ('$fname','$lname', '$email', '$phone','$message')";
 
         if (mysqli_query($conn,$sql)){
-            
+            header("Location: index.php");
             exit();
         } else {
             header("Location: error.php");
