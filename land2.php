@@ -12,28 +12,7 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
-<body class="body1">
-    <h1 class="ayao">AYAO MEDICAL CENTER</h1>
-    <p class="ayao1">Dedicated to providing multidisciplinary medical care and backed by state of the-art facilities.</p>
-
-    <div class="divs">
-        <div class="div1">
-        <span class="material-symbols-outlined">call</span>
-        <h3>EMERGENCY CONTACT</h3>
-        <h2>+233 20 4868 516</h2>
-        </div>
-        <div class="div2">
-        <span class="material-symbols-outlined">calendar_month</span>
-        <h3>DOCTOR APPOINTMENT</h3>
-        <a href="./land.php">BOOK AN APPOINTMENT</a>
-        </div>
-        <div class="div3">
-        <span class="material-symbols-outlined">schedule</span>
-        <h3>OPENING HOURS</h3>
-        <h2>24/7 SERVICE DELIVERY</h2>
-        </div>
-    </div>
-    <div class="body2">
+<body class="body2">
     <div class="p2">
         <div class="p24">
             <img class="" src="./images/docs.png" alt="">
@@ -77,93 +56,6 @@
             </p>
         </div>
     </div>
-    </div>
-    <div class="body--3">
-    <h3 class="departs">Departments</h3>
-
-<div class="depart">
-    <div>
-        <span class="material-symbols-outlined">
-        surgical
-        </span>
-        <h4>Surgery</h4>
-    </div>
-    <div>
-        <span class="material-symbols-outlined">
-        pediatrics
-        </span>
-        <h4>Pediatrics</h4>
-    </div>
-    <div>
-        <span class="material-symbols-outlined">
-        pregnant_woman
-        </span>
-        <h4>Obstetrics & Gynecology</h4>
-    </div>
-    <div>
-        <span class="material-symbols-outlined">
-        cardiology
-        </span>
-        <h4>Cardiology</h4>
-    </div>
-    <div>
-        <span class="material-symbols-outlined">
-        local_hospital
-        </span>
-        <h4>Emergency</h4>
-    </div>
-    <div>
-        <span class="material-symbols-outlined">
-        radiology
-        </span>
-        <h4>Radiology</h4>
-    </div>
-    <div>
-        <span class="material-symbols-outlined">
-        local_pharmacy
-        </span>
-        <h4>Pharmacy</h4>
-    </div>
-    <div>
-        <span class="material-symbols-outlined">
-        fitness_center
-        </span>
-        <h4>Physical Theraphy</h4>
-    </div>
-</div>
-
-<p class="depart--para">These are just a few of the specialized departments at Ayao Medical Hospital. We are dedicated to providing you with the highest standard of medical care across a broad spectrum of specialties. Our expert teams collaborate to ensure that you receive comprehensive and holistic treatment tailored to your specific needs.</p>
-    </div>
-    <div class="body--4">
-    <h2>Get In Touch With Our Professionals</h2>
-    <p>Kindly fill this form, our team will gt back to you ASAP!</p>
-    <form  class="forms4" action="">
-        <div>
-            <label for="fname">First name</label>
-            <input class="item1" type="text" name="" id="">
-        </div>
-        <div>
-            <label for="lname">Last name</label>
-            <input type="text" name="" id="">
-        </div>
-        <div>
-            <label for="email">Email address</label>
-            <input type="text" name="" id="" >
-        </div>
-        <div>
-            <label for="phone">Phone number</label>
-            <input type="text" name="" id="" >
-        </div>
-        <div class="item5">
-            <label for="message">Message</label>
-            <textarea  name="" id="" cols="25" rows="10" ></textarea>
-        </div>
-        <input class="item6" type="submit" value="Send message">
-    </form>
-    </div>
 </body>
 </html>
 <?php include './footer.php'?>
-
-
-

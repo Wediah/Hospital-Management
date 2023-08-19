@@ -22,25 +22,25 @@
                 <div class="nav3" id="navigation">
                     <ul>
                         <li>
-                            <a href="">HOME</a>
+                            <a href="./index.php">HOME</a>
                         </li>
                         <li>
-                            <a href="">DEPARTMENTS</a>
+                            <a href="./land3.php">DEPARTMENTS</a>
                         </li>
                         <li>
-                            <a href ="">ABOUT</a>
+                            <a href ="./land2.php">ABOUT</a>
                         </li>
                         <li>
-                            <a href="">APPOINTMENT</a>
+                            <a href="./land.php">APPOINTMENT</a>
                         </li>
                         <li>
-                            <a href="">CONTACT</a>
+                            <a href="./land4.php">CONTACT</a>
                         </li>
                     </ul>
                     
                 </div>
                 <div class="ti3">
-                    <a class="button--3" >Login</a>
+                    <a class="button--3" href="./land.php" >Login</a>
                     <button class="snav" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                         <img src="./Adminimg/iconn.png" alt="">
                     </button>
@@ -59,11 +59,11 @@
     <div class="offcanvas-body">
         <div class="mobile-nav">
             
-            <a href="">HOME</a>
-            <a href="">DEPARTMENTS</a>
-            <a href="">ABOUT</a>
-            <a href="">APPOINTMENT</a>
-            <a href="">CONTACT</a>
+            <a href="./index.php">HOME</a>
+            <a href="./land3.php">DEPARTMENTS</a>
+            <a href="./land2.php">ABOUT</a>
+            <a href="./land.php">APPOINTMENT</a>
+            <a href="./land4.php">CONTACT</a>
         </div>
       
     </div>
