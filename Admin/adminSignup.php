@@ -12,7 +12,7 @@
     
 </head>
 <body>
-    <h2>Lucy Mememorial</h2>
+    <h2>Ayao Medical Center</h2>
     <div>
         <h3>Create a new account</h3>
         <p>It's quick and simple</p>
