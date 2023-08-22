@@ -13,12 +13,13 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = $_POST['id'];
     $name = $_POST["name"];
+    $email = $_POST["email"];
     $ward = $_POST["ward"];
     $bedno = $_POST["bedno"];
     $allocate = $_POST["allocate"];
     $dellocate = $_POST["dellocate"];
 
-    $sql = "UPDATE bed SET name='$name', ward='$ward', bedno='$bedno', allocate='$allocate',dellocate='$dellocate'  WHERE id=$id";
+    $sql = "UPDATE bed SET name='$name', email='$email', ward='$ward', bedno='$bedno', allocate='$allocate',dellocate='$dellocate'  WHERE id=$id";
 
     if ($conn->query($sql) === TRUE) {
         echo "Record updated successfully!";
@@ -51,6 +52,7 @@ $conn->close();
         <form method="post" action="">
             <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
             Full Name: <input type="text" name="name" value="<?php echo $row['name']; ?>"><br>
+            Patient Email: <input type="text" name="email" value="<?php echo $row['email']; ?>"><br>
             Ward: <input type="text" name="ward" value="<?php echo $row['ward']; ?>"><br>
             Bed Number: <input type="text" name="bedno" value="<?php echo $row['bedno']; ?>"><br>
             Allocation Date: <input type="date" name="allocate" value="<?php echo $row['allocate']; ?>"><br>

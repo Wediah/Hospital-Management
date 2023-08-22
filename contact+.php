@@ -12,13 +12,12 @@
     echo 'Connected successfully';
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $fname = $_POST["fname"];
-        $lname = $_POST["lname"];
+        $name = $_POST["name"];
         $email = $_POST["email"];
         $phone = $_POST["phone"];
         $message  = $_POST["message"];
 
-        $sql = "INSERT INTO contact (fname,lname, email, phone,message) VALUES ('$fname','$lname', '$email', '$phone','$message')";
+        $sql = "INSERT INTO contact (name, email, phone,message) VALUES ('$name', '$email', '$phone','$message')";
 
         if (mysqli_query($conn,$sql)){
             header("Location: index.php");

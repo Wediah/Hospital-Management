@@ -18,10 +18,10 @@
             <span class="material-symbols-outlined">
                 arrow_circle_right
             </span>
-            <h3>Appointments</h3>
+            <h3>Operation History</h3>
         </div>
         <div>
-            <button class="appt-bttn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Kindly contact your doctor to make changes.</button>
+            <button class="appt-bttn" >Kindly contact your doctor to make changes.</button>
         </div>
     </div>
 
@@ -45,21 +45,21 @@
     }
 
     $email = $_SESSION['user_email'];
-    $sql = "SELECT * FROM appointments WHERE email = '$email'";
+    $sql = "SELECT * FROM reports WHERE email = '$email'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         echo "<table>";
-        echo "<tr><th>ID</th><th>Date</th><th>Time</th><th>Name</th><th>Doctor</th><th>Doctor Email</th></tr>";
+        echo "<tr><th>ID</th><th>Date</th><th>Name</th><th>Doctor</th><th>Operation Type</th><th>Operation Report</th></tr>";
         
         while ($row = $result->fetch_assoc()) {
             echo "<tr>";
             echo "<td>" . $row["id"] . "</td>";
             echo "<td>" . $row["date"] . "</td>";
-            echo "<td>" . $row["time"] . "</td>";
             echo "<td>" . $row["name"] . "</td>";
             echo "<td>" . $row["doctor"] . "</td>";
-            echo "<td>" . $row["mail"] . "</td>";
+            echo "<td>" . $row["operation"] . "</td>";
+            echo "<td>" . $row["description"] . "</td>";
             echo "</tr>";
         }
         

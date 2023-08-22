@@ -13,12 +13,13 @@
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = $_POST["name"];
+        $email = $_POST["email"];
         $ward = $_POST["ward"];
         $bedno = $_POST["bedno"];
         $allocate = $_POST["allocate"];
         $dellocate = $_POST["dellocate"];
 
-        $sql = "INSERT INTO bed (name, ward, bedno, allocate, dellocate) VALUES ('$name', '$ward', '$bedno', '$allocate', '$dellocate')";
+        $sql = "INSERT INTO bed (name, email, ward, bedno, allocate, dellocate) VALUES ('$name', '$email', '$ward', '$bedno', '$allocate', '$dellocate')";
 
         if (mysqli_query($conn,$sql)){
             header("Location: bed.php");

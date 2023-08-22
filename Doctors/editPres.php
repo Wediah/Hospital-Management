@@ -13,13 +13,14 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = $_POST['id'];
     $date = $_POST['date'];
-    $time = $_POST['name'];
+    $name = $_POST['name'];
+    $email = $_POST['email'];
     $age = $_POST['age'];
     $gender = $_POST['gender'];
     $doctor = $_POST['doctor'];
     $prescription = $_POST['prescription'];
 
-    $sql = "UPDATE prescriptions SET date='$date', name='$name', age='$age', gender='$gender', doctor='$doctor', prescription='$prescription' WHERE id=$id";
+    $sql = "UPDATE prescriptions SET date='$date', name='$name', email='$email', age='$age', gender='$gender', doctor='$doctor', prescription='$prescription' WHERE id=$id";
 
     if ($conn->query($sql) === TRUE) {
         echo "Record updated successfully!";
@@ -53,6 +54,7 @@ $conn->close();
             <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
             Date: <input type="date" name="date" value="<?php echo $row['date']; ?>"><br>
             Name: <input type="text" name="name" value="<?php echo $row['name']; ?>"><br>
+            Email: <input type="text" name="name" value="<?php echo $row['email']; ?>"><br>
             Age: <input type="text" name="age" value="<?php echo $row['age']; ?>"><br>
             Gender: <input type="text" name="gender" value="<?php echo $row['gender']; ?>"><br>
             Doctor: <input type="text" name="doctor" value="<?php echo $row['doctor']; ?>"><br>

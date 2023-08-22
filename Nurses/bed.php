@@ -39,6 +39,7 @@
                 <div class="modal-body">
                     <form class="forms1" name="signup" action="./bed+.php" method="post">
                         <input type="text" name="name" id="name" placeholder="Patient Name">
+                        <input type="text" name="email" id="email" placeholder="Patient Email">
                         <input type="text" name="ward" id="ward" placeholder="Ward">
                         <input type="text" name="bedno" id="bedno" placeholder="Bed Number">
                         <input type="date" name="allocate" id="allocate" placeholder="Allocation Date">
@@ -69,12 +70,13 @@
 
     if ($result->num_rows > 0) {
         echo "<table>";
-        echo "<tr><th>ID</th><th>Patient Name</th><th>Ward</th><th>Bed Number</th><th>Allocation date</th> <th>Discharge Date</th></tr>";
+        echo "<tr><th>ID</th><th>Patient Name</th><th>Email</th><th>Ward</th><th>Bed Number</th><th>Allocation date</th> <th>Discharge Date</th></tr>";
         
         while ($row = $result->fetch_assoc()) {
             echo "<tr>";
             echo "<td>" . $row["id"] . "</td>";
             echo "<td>" . $row["name"] . "</td>";
+            echo "<td>" . $row["email"] . "</td>";
             echo "<td>" . $row["ward"] . "</td>";
             echo "<td>" . $row["bedno"] . "</td>";
             echo "<td>" . $row["allocate"] . "</td>";

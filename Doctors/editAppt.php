@@ -15,9 +15,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $date = $_POST['date'];
     $time = $_POST['time'];
     $name = $_POST['name'];
+    $name = $_POST['email'];
     $doctor = $_POST['doctor'];
+    $mail= $_POST['mail'];
 
-    $sql = "UPDATE appointments SET date='$date', time='$time', name='$name', doctor='$doctor' WHERE id=$id";
+    $sql = "UPDATE appointments SET date='$date', time='$time', name='$name', email='$email', doctor='$doctor', mail='$mail' WHERE id=$id";
 
     if ($conn->query($sql) === TRUE) {
         echo "Record updated successfully!";
@@ -52,7 +54,9 @@ $conn->close();
             Date: <input type="date" name="date" value="<?php echo $row['date']; ?>"><br>
             Time: <input type="time" name="time" value="<?php echo $row['time']; ?>"><br>
             Name: <input type="text" name="name" value="<?php echo $row['name']; ?>"><br>
+            Patient Email: <input type="text" name="email" value="<?php echo $row['email']; ?>"><br>
             Doctor: <input type="text" name="doctor" value="<?php echo $row['doctor']; ?>"><br>
+            Doctor Email: <input type="text" name="mail" value="<?php echo $row['mail']; ?>"><br>
             <input type="submit" value="Save">
         </form>
     </div>

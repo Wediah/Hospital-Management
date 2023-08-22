@@ -13,11 +13,13 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = $_POST['id'];
     $name = $_POST["date"];
-    $ward = $_POST["name"];
-    $bedno = $_POST["doctor"];
-    $allocate = $_POST["description"];
+    $email = $_POST["email"];
+    $name = $_POST["name"];
+    $doctor = $_POST["doctor"];
+    $operation = $_POST["operation"];
+    $description = $_POST["description"];
 
-    $sql = "UPDATE reports SET date='$date', name='$name', doctor='$doctor', description='$description'  WHERE id=$id";
+    $sql = "UPDATE reports SET date='$date', name='$name', email='$email', doctor='$doctor', operation='$operation', description='$description'  WHERE id=$id";
 
     if ($conn->query($sql) === TRUE) {
         echo "Record updated successfully!";
@@ -51,7 +53,9 @@ $conn->close();
             <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
             Date: <input type="date" name="date" value="<?php echo $row['date']; ?>"><br>
             Name: <input type="text" name="name" value="<?php echo $row['name']; ?>"><br>
+            Email: <input type="text" name="email" value="<?php echo $row['email']; ?>"><br>
             Doctor: <input type="text" name="doctor" value="<?php echo $row['doctor']; ?>"><br>
+            Operation Type: <input type="text" name="operation" value="<?php echo $row['operation']; ?>"><br>
             Description: <textarea type="text" name="description" value="<?php echo $row['description']; ?>"></textarea><br>
             <input type="submit" value="Save">
         </form>

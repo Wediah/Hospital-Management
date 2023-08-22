@@ -1,4 +1,4 @@
-<?php include './patientNav.php' ?>
+<?php include './patientNav.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,29 +11,20 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
-    <h1 class="title">Ayao Mediacal Center</h1>
+    <h1 class="title">Ayao Medical Center</h1>
     <hr>
     <div class="appt-head">
         <div class="appt">
             <span class="material-symbols-outlined">
                 arrow_circle_right
             </span>
-            <h3>Appointments</h3>
-        </div>
-        <div>
-            <button class="appt-bttn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Kindly contact your doctor to make changes.</button>
+            <h3>Doctors</h3>
         </div>
     </div>
 
+
     <?php
-    
-
-    if (!isset($_SESSION['user_email'])) {
-        header("Location: patientSignin.php");
-        exit();
-    }
-
-    $host = "localhost: 3306";
+    $host = "localhost:3306";
     $user = "root";
     $password = "";
     $dbname = "hospitalmanagement";
@@ -44,22 +35,20 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $email = $_SESSION['user_email'];
-    $sql = "SELECT * FROM appointments WHERE email = '$email'";
+    $sql = "SELECT * FROM doctor";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         echo "<table>";
-        echo "<tr><th>ID</th><th>Date</th><th>Time</th><th>Name</th><th>Doctor</th><th>Doctor Email</th></tr>";
+        echo "<tr><th>Serial Number</th><th>Full Name</th><th>Department</th><th>Email</th><th>Phone</th><th>Password</th></tr>";
         
         while ($row = $result->fetch_assoc()) {
             echo "<tr>";
             echo "<td>" . $row["id"] . "</td>";
-            echo "<td>" . $row["date"] . "</td>";
-            echo "<td>" . $row["time"] . "</td>";
-            echo "<td>" . $row["name"] . "</td>";
-            echo "<td>" . $row["doctor"] . "</td>";
-            echo "<td>" . $row["mail"] . "</td>";
+            echo "<td>" . $row["fullname"] . "</td>";
+            echo "<td>" . $row["department"] . "</td>";
+            echo "<td>" . $row["phone"] . "</td>";
+            echo "<td>" . $row["email"] . "</td>";
             echo "</tr>";
         }
         
@@ -71,7 +60,5 @@
     $conn->close();
     ?>
     
-    <script src="./patients2.js"></script>  
 </body>
 </html>
-

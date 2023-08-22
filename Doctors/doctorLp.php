@@ -45,7 +45,9 @@
                         <label for="time">Time</label>
                         <input type="time" name="time" id="time">
                         <input type="text" name="name" id="name" placeholder="Full name">
-                        <input type="doctor" name="doctor" id="doctor" placeholder="Doctor">
+                        <input type="text" name="email" id="email" placeholder="Patient's email">
+                        <input type="text" name="doctor" id="doctor" placeholder="Doctor">
+                        <input type="text" name="mail" id="mail" placeholder="Doctor's Email">
                         <button type="submit" value="submit" onclick="validateForm()">Add Appointment</button>
                     
                     </form>
@@ -71,7 +73,7 @@
 
     if ($result->num_rows > 0) {
         echo "<table>";
-        echo "<tr><th>ID</th><th>Date</th><th>Time</th><th>Name</th><th>Doctor</th></tr>";
+        echo "<tr><th>ID</th><th>Date</th><th>Time</th><th>Name</th><th>Patient Email</th><th>Doctor</th><th>Doctor Email</th></tr>";
         
         while ($row = $result->fetch_assoc()) {
             echo "<tr>";
@@ -79,7 +81,9 @@
             echo "<td>" . $row["date"] . "</td>";
             echo "<td>" . $row["time"] . "</td>";
             echo "<td>" . $row["name"] . "</td>";
+            echo "<td>" . $row["email"] . "</td>";
             echo "<td>" . $row["doctor"] . "</td>";
+            echo "<td>" . $row["mail"] . "</td>";
             echo "<td class='action-buttons'>
                     <a href='editAppt.php?id=" . $row["id"] . "'>Edit</a>
                     <a href='deleteAppt.php?id=" . $row["id"] . "'>Delete</a>

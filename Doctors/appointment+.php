@@ -15,9 +15,11 @@
         $date = $_POST["date"];
         $time = $_POST["time"];
         $name = $_POST["name"];
+        $email = $_POST["email"];
         $doctor = $_POST["doctor"];
+        $mail = $_POST["mail"];
 
-        $sql = "INSERT INTO appointments (date, time, name, doctor) VALUES ('$date', '$time', '$name', '$doctor')";
+        $sql = "INSERT INTO appointments (date, time, name, email, doctor, mail) VALUES ('$date', '$time', '$name', '$email', '$doctor', '$mail')";
 
         if (mysqli_query($conn,$sql)){
             header("Location: doctorLp.php");

@@ -40,9 +40,11 @@
                     <form class="forms1" name="signup" action="./reports+.php" method="post">
                         <input type="date" name="date" id="date">
                         <input type="text" name="name" id="name" placeholder="Patient Name">
+                        <input type="text" name="email" id="email" placeholder="Patient Email">
                         <input type="text" name="doctor" id="doctor" placeholder="Doctor">
-                        <textarea type="text" name="description" id="description" placeholder="Description"></textarea>
-                        <button type="submit" value="submit" onclick="validateForm()">Add Appointment</button>
+                        <input type="text" name="operation" id="operation" placeholder="Operation Type">
+                        <textarea type="text" name="description" id="description" placeholder="Report"></textarea>
+                        <button type="submit" value="submit" onclick="validateForm()">Add Report</button>
                     
                     </form>
                 </div>
@@ -68,14 +70,16 @@
 
     if ($result->num_rows > 0) {
         echo "<table>";
-        echo "<tr><th>ID</th><th>Date</th><th>Patient Name</th><th>Doctor</th><th>Description</th></tr>";
+        echo "<tr><th>ID</th><th>Date</th><th>Patient Name</th><th>Patient Email</th><th>Doctor</th><th>Operation Type</th><th>Description</th></tr>";
         
         while ($row = $result->fetch_assoc()) {
             echo "<tr>";
             echo "<td>" . $row["id"] . "</td>";
             echo "<td>" . $row["date"] . "</td>";
             echo "<td>" . $row["name"] . "</td>";
+            echo "<td>" . $row["email"] . "</td>";
             echo "<td>" . $row["doctor"] . "</td>";
+            echo "<td>" . $row["operation"] . "</td>";
             echo "<td>" . $row["description"] . "</td>";
             echo "<td class='action-buttons'>
                     <a href='editRep.php?id=" . $row["id"] . "'>Edit</a>

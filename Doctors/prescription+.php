@@ -14,12 +14,13 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $date = $_POST["date"];
         $name = $_POST["name"];
+        $email = $_POST["email"];
         $age = $_POST["age"];
         $gender = $_POST["gender"];
         $doctor = $_POST["doctor"];
         $prescription = $_POST["prescription"];
 
-        $sql = "INSERT INTO prescriptions (date, name, age, gender, doctor, prescription) VALUES ('$date', '$name','$age', '$gender', '$doctor', '$prescription')";
+        $sql = "INSERT INTO prescriptions (date, name, email, age, gender, doctor, prescription) VALUES ('$date', '$name', '$email', '$age', '$gender', '$doctor', '$prescription')";
 
         if (mysqli_query($conn,$sql)){
             header("Location: doctorPres.php");

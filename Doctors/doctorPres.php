@@ -39,6 +39,7 @@
                     <form class="forms1" name="signup" action="./prescription+.php" method="post">
                         <input type="date" name="date" id="date" placeholder>
                         <input type="text" name="name" id="name" placeholder="Patient's Name">
+                        <input type="text" name="email" id="email" placeholder="Patient's Email">
                         <input type="text" name="age" id="age" placeholder="Patient's Age">
                         <input type="text" name="gender" id="gender" placeholder="Pateint's gender">
                         <input type="doctor" name="doctor" id="doctor" placeholder="Doctor">
@@ -71,13 +72,14 @@
 
     if ($result->num_rows > 0) {
         echo "<table>";
-        echo "<tr><th>Serial Number</th><th>Date</th><th>Name</th><th>age</th><th>Gender</th><th>Doctor</th><th>Prescription</th></tr>";
+        echo "<tr><th>Serial Number</th><th>Date</th><th>Name</th><th>Patient Email</th><th>age</th><th>Gender</th><th>Doctor</th><th>Prescription</th></tr>";
         
         while ($row = $result->fetch_assoc()) {
             echo "<tr>";
             echo "<td>" . $row["id"] . "</td>";
             echo "<td>" . $row["date"] . "</td>";
             echo "<td>" . $row["name"] . "</td>";
+            echo "<td>" . $row["email"] . "</td>";
             echo "<td>" . $row["age"] . "</td>";
             echo "<td>" . $row["gender"] . "</td>";
             echo "<td>" . $row["doctor"] . "</td>";

@@ -49,42 +49,35 @@ $conn->close();
     <div class="links-only">
         
             
-        <a href="">
+        <a href="./patientLanding.php">
             <span class="material-symbols-outlined">
             book_online
             </span>
             <h4>Appointments</h4>
         </a>
         <hr>
-        <a href="">
+        <a href="./patientPres.php">
             <span class="material-symbols-outlined">
             prescriptions
             </span>
-            <h4>Prescription</h4>
+            <h4>Prescription/ Medications</h4>
         </a>
         <hr>
-        <a href="">
-            <span class="material-symbols-outlined">
-            medication
-            </span>
-            <h4>Medications</h4>
-        </a>
-        <hr>
-        <a href="">
+        <a href="./doctorlist2.php">
             <span class="material-symbols-outlined">
             stethoscope
             </span>
             <h4>Doctor List</h4>
         </a>
         <hr>
-        <a href="">
+        <a href="./patientOp.php">
             <span class="material-symbols-outlined">
             surgical
             </span>
             <h4>Operation History</h4>
         </a>
         <hr>
-        <a href="">
+        <a href="./patientAd.php">
             <span class="material-symbols-outlined">
             ward
             </span>
@@ -94,7 +87,7 @@ $conn->close();
     </div>
 
     <div class="log--out">
-        <a href="">
+        <a href="./patientPro.php">
             <span class="material-symbols-outlined">
             person
             </span>

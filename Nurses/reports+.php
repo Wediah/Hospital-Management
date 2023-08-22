@@ -14,10 +14,12 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $date = $_POST["date"];
         $name = $_POST["name"];
+        $email = $_POST["email"];
         $doctor = $_POST["doctor"];
+        $operation = $_POST["operation"];
         $description = $_POST["description"];
 
-        $sql = "INSERT INTO reports (date, name, doctor, description) VALUES ('$date', '$name', '$doctor', '$description')";
+        $sql = "INSERT INTO reports (date, name, email, doctor, operation, description) VALUES ('$date', '$name', '$email', '$doctor', '$operation', '$description')";
 
         if (mysqli_query($conn,$sql)){
             header("Location: reports.php");

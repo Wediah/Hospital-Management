@@ -16,7 +16,7 @@
       <div class="nav1">
           <div class="nav2"> 
                 <div class="ti1"> 
-                    <a href="./adminLp.php">AMC</a> 
+                    <a href="./index.php">AMC</a> 
                 </div>
 
                 <div class="nav3" id="navigation">
