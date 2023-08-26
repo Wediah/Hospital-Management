@@ -239,7 +239,7 @@ a {
 
 #admin--page {
 
-    background-color: rgb(214, 213, 213);
+    background-color: rgb(255, 255, 255);
     justify-content: center;
 }
 
@@ -256,7 +256,7 @@ a {
 
 .reports {
     border-radius: 5px;
-    background: rgba(105, 155, 247, 0.14);
+    background: rgba(105, 155, 247, 0.534);
     width: 140px;
     
     padding: 10px;
@@ -523,6 +523,7 @@ a {
     background-color: white;
     padding: 10px;
     border-radius: 4px;
+    border: 1px solid rgba(155, 153, 153, 1);
   }
 
 

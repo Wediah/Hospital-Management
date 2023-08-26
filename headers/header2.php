@@ -19,7 +19,7 @@
       <div class="nav1">
           <div class="nav2"> 
                 <div class="ti1"> 
-                    <a href="/adminLp.php">AMC</a> 
+                    <a href="#">AMC</a> 
                 </div>
 
                

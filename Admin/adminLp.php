@@ -28,7 +28,32 @@ include './header.php';
                     <span id="icon-pa" class="material-symbols-outlined">
                         person
                     </span>
-                    <h2>10</h2>
+                    <?php
+                    $host = "localhost:3306"; 
+                    $username = "root"; 
+                    $password = ""; 
+                    $dbname = "hospitalmanagement"; 
+
+                    $conn = mysqli_connect($host, $username, $password, $dbname);
+
+                    if (!$conn) {
+                        die("Connection failed: " . mysqli_connect_error());
+                    }
+
+                    $query = "SELECT COUNT(*) as total FROM patients";
+
+                    $result = mysqli_query($conn, $query);
+
+                    if ($result) {
+                        $row = mysqli_fetch_assoc($result);
+                        $totalCount = $row['total'];
+                        echo "<h2>" . $totalCount . "</h2>";
+                    } else {
+                        echo "0" . mysqli_error($conn);
+                    }
+
+                    mysqli_close($conn);
+                    ?>
                 </div>
             </div>
             <div class="reports">
@@ -37,34 +62,101 @@ include './header.php';
                     <span id="icon-pa1" class="material-symbols-outlined">
                         inpatient
                     </span>
-                    <h2>10</h2>
+                    <?php
+                    $host = "localhost:3306"; 
+                    $username = "root"; 
+                    $password = ""; 
+                    $dbname = "hospitalmanagement"; 
+
+                    $conn = mysqli_connect($host, $username, $password, $dbname);
+
+                    if (!$conn) {
+                        die("Connection failed: " . mysqli_connect_error());
+                    }
+
+                    $query = "SELECT COUNT(*) as total FROM bed";
+
+                    $result = mysqli_query($conn, $query);
+
+                    if ($result) {
+                        $row = mysqli_fetch_assoc($result);
+                        $totalCount = $row['total'];
+                        echo "<h2>" . $totalCount . "</h2>";
+                    } else {
+                        echo "0" . mysqli_error($conn);
+                    }
+
+                    mysqli_close($conn);
+                    ?>
                 </div>
             </div>
-            <div class="reports">
-                <p class="first--p">Outpatients</p>
-                <div class="icon-con">
-                    <span id="icon-pa2" class="material-symbols-outlined">
-                        outpatient
-                    </span>
-                    <h2>10</h2>
-                </div>
-            </div>
+            
             <div class="reports">
                 <p class="first--p">Doctors Available</p>
                 <div class="icon-con">
                     <span id="icon-doc" class="material-symbols-outlined">
                         stethoscope
                     </span>
-                    <h2>10</h2>
+                    <?php
+                    $host = "localhost:3306"; 
+                    $username = "root"; 
+                    $password = ""; 
+                    $dbname = "hospitalmanagement"; 
+
+                    $conn = mysqli_connect($host, $username, $password, $dbname);
+
+                    if (!$conn) {
+                        die("Connection failed: " . mysqli_connect_error());
+                    }
+
+                    $query = "SELECT COUNT(*) as total FROM doctor";
+
+                    $result = mysqli_query($conn, $query);
+
+                    if ($result) {
+                        $row = mysqli_fetch_assoc($result);
+                        $totalCount = $row['total'];
+                        echo "<h2>" . $totalCount . "</h2>";
+                    } else {
+                        echo "0" . mysqli_error($conn);
+                    }
+
+                    mysqli_close($conn);
+                    ?>
                 </div>
             </div>
             <div class="reports">
-                <p class="first--p">Beds Available</p>
+                <p class="first--p">Beds Occupied</p>
                 <div class="icon-con">
                     <span id="icon-pa1" class="material-symbols-outlined">
                         hotel
                     </span>
-                    <h2>10</h2>
+                    <?php
+                    $host = "localhost:3306"; 
+                    $username = "root"; 
+                    $password = ""; 
+                    $dbname = "hospitalmanagement"; 
+
+                    $conn = mysqli_connect($host, $username, $password, $dbname);
+
+                    if (!$conn) {
+                        die("Connection failed: " . mysqli_connect_error());
+                    }
+
+                    $query = "SELECT COUNT(*) as total FROM bed";
+
+                    $result = mysqli_query($conn, $query);
+
+                    if ($result) {
+                        $row = mysqli_fetch_assoc($result);
+                        $totalCount = $row['total'];
+                        echo "<h2>" . $totalCount . "</h2>";
+                    } else {
+                        echo "0" . mysqli_error($conn);
+                    }
+
+                    mysqli_close($conn);
+                    ?>
                 </div>
             </div>
             <div class="reports">
@@ -82,7 +174,32 @@ include './header.php';
                     <span id="icon-pa2" class="material-symbols-outlined">
                         home_health
                     </span>
-                    <h2>10</h2>
+                    <?php
+                    $host = "localhost:3306"; 
+                    $username = "root"; 
+                    $password = ""; 
+                    $dbname = "hospitalmanagement"; 
+
+                    $conn = mysqli_connect($host, $username, $password, $dbname);
+
+                    if (!$conn) {
+                        die("Connection failed: " . mysqli_connect_error());
+                    }
+
+                    $query = "SELECT COUNT(*) as total FROM nurse";
+
+                    $result = mysqli_query($conn, $query);
+
+                    if ($result) {
+                        $row = mysqli_fetch_assoc($result);
+                        $totalCount = $row['total'];
+                        echo "<h2>" . $totalCount . "</h2>";
+                    } else {
+                        echo "0" . mysqli_error($conn);
+                    }
+
+                    mysqli_close($conn);
+                    ?>
                 </div>
             </div>
             <!--<div class="reports">
@@ -100,7 +217,66 @@ include './header.php';
                     <span id="icon-doc" class="material-symbols-outlined">
                         biotech
                     </span>
-                    <h2>10</h2>
+                    <?php
+                    $host = "localhost:3306"; 
+                    $username = "root"; 
+                    $password = ""; 
+                    $dbname = "hospitalmanagement"; 
+
+                    $conn = mysqli_connect($host, $username, $password, $dbname);
+
+                    if (!$conn) {
+                        die("Connection failed: " . mysqli_connect_error());
+                    }
+
+                    $query = "SELECT COUNT(*) as total FROM lab";
+
+                    $result = mysqli_query($conn, $query);
+
+                    if ($result) {
+                        $row = mysqli_fetch_assoc($result);
+                        $totalCount = $row['total'];
+                        echo "<h2>" . $totalCount . "</h2>";
+                    } else {
+                        echo "0" . mysqli_error($conn);
+                    }
+
+                    mysqli_close($conn);
+                    ?>
+                </div>
+            </div>
+            <div class="reports">
+                <p class="first--p">Births</p>
+                <div class="icon-con">
+                    <span id="icon-pa2" class="material-symbols-outlined">
+                        pregnancy
+                    </span>
+                    <?php
+                    $host = "localhost:3306"; 
+                    $username = "root"; 
+                    $password = ""; 
+                    $dbname = "hospitalmanagement"; 
+
+                    $conn = mysqli_connect($host, $username, $password, $dbname);
+
+                    if (!$conn) {
+                        die("Connection failed: " . mysqli_connect_error());
+                    }
+
+                    $query = "SELECT COUNT(*) as total FROM birth";
+
+                    $result = mysqli_query($conn, $query);
+
+                    if ($result) {
+                        $row = mysqli_fetch_assoc($result);
+                        $totalCount = $row['total'];
+                        echo "<h2>" . $totalCount . "</h2>";
+                    } else {
+                        echo "0" . mysqli_error($conn);
+                    }
+
+                    mysqli_close($conn);
+                    ?>
                 </div>
             </div>
             
@@ -754,6 +930,58 @@ include './header.php';
                     echo "<td class='action-buttons'>
                             <a href='editBirth.php?id=" . $row["id"] . "'>Edit</a>
                             <a href='deleteBirth.php?id=" . $row["id"] . "'>Delete</a>
+                        </td>";
+                    echo "</tr>";
+                }
+                
+                echo "</table>";
+            } else {
+                echo "No results found.";
+            }
+
+            $conn->close();
+            ?>
+        </div>
+        <div class="repdiv1">
+            <div class="appt-head">
+                <div class="appt">
+                    <span class="material-symbols-outlined">
+                        arrow_circle_right
+                    </span>
+                    <h3>Contact Form</h3>
+                </div>
+            </div>
+
+
+
+            <?php
+            $host = "localhost:3306";
+            $user = "root";
+            $password = "";
+            $dbname = "hospitalmanagement";
+
+            $conn = new mysqli($host, $user, $password, $dbname);
+
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            $sql = "SELECT * FROM contact";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                echo "<table>";
+                echo "<tr><th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Message</th></tr>";
+                
+                while ($row = $result->fetch_assoc()) {
+                    echo "<tr>";
+                    echo "<td>" . $row["id"] . "</td>";
+                    echo "<td>" . $row["name"] . "</td>";
+                    echo "<td>" . $row["email"] . "</td>";
+                    echo "<td>" . $row["phone"] . "</td>";
+                    echo "<td>" . $row["message"] . "</td>";
+                    echo "<td class='action-buttons'>
+                            <a href='deleteContact.php?id=" . $row["id"] . "'>Delete</a>
                         </td>";
                     echo "</tr>";
                 }
