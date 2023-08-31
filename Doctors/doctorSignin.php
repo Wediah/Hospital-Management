@@ -17,7 +17,7 @@
         <button type="submit" value="submit" onclick="validateForm()">Sign in</button>
         </form>
 
-        <p>Forgotten Password?</p>
+        <p>Forgotten Password? Contact Admin for Support.</p>
 
         <hr class="hr-text" data-content="OR">
 
